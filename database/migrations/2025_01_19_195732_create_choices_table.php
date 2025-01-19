@@ -18,12 +18,12 @@ return new class extends Migration
             $table->string('choise_name', 255)->unique()->nullable();
             $table->string('choise_name_it', 255)->unique()->nullable();
             $table->string('choise_name_fr', 255)->unique()->nullable();
-            $table->text('choise_description')->unique();
-            $table->text('choise_description_it')->unique()->nullable();
-            $table->text('choise_description_fr')->unique()->nullable();
+            $table->text('choise_description');
+            $table->text('choise_description_it')->nullable();
+            $table->text('choise_description_fr')->nullable();
             
             $table->timestamps();
-            
+
         });
     }
 

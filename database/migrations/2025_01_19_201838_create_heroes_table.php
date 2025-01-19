@@ -16,9 +16,9 @@ return new class extends Migration
             $table->id();
 
             $table->string('hero_name', 255)->unique();
-            $table->text('hero_description')->unique()->nullable();
-            $table->text('hero_description_it')->unique()->nullable();
-            $table->text('hero_description_fr')->unique()->nullable();
+            $table->text('hero_description')->nullable();
+            $table->text('hero_description_it')->nullable();
+            $table->text('hero_description_fr')->nullable();
 
             $table->timestamps();
 
