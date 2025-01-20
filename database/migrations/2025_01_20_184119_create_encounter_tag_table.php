@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tiers', function (Blueprint $table) {
+        Schema::create('encounter_tag', function (Blueprint $table) {
 
-            $table->id();
-
-            $table->enum('tier_label', ['bronze', 'silver', 'gold', 'diamond']);
-            $table->enum('tier_size', ['small', 'medium', 'large']);
-            
-            $table->timestamps();
+            $table->foreignId('encounter_id')->constrained()->onDelete('cascade');
+            $table->foreignId('tag_id')->constrained()->onDelete('cascade');
+            $table->primary(['encounter_id', 'tag_id']);
         });
     }
 
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tiers');
+        Schema::dropIfExists('encounter_tag');
     }
 };
