@@ -8,4 +8,24 @@ use Illuminate\Database\Eloquent\Model;
 class Encounter extends Model
 {
     use HasFactory;
+
+    ///// Relations /////
+
+    public function choices()
+    {
+        return $this->belongsToMany(Choice::class, 'choise_encounter')
+            ->withPivot('value');
+    }
+
+    public function media()
+    {
+
+        return $this->hasOne(Media::class);
+    }
+
+    public function tags()
+    {
+
+        return $this->belongsToMany(Tag::class);
+    }
 }

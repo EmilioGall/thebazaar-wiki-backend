@@ -7,5 +7,58 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
+    
     use HasFactory;
+
+    ///// Relations /////
+
+    public function effects()
+    {
+
+        return $this->belongsToMany(Effect::class, 'effect_item')
+            ->withPivot('value');
+    }
+
+    public function enchantments()
+    {
+
+        return $this->belongsToMany(Enchantment::class, 'enchantment_item')
+            ->withPivot('value');
+    }
+
+    public function hero()
+    {
+
+        return $this->belongsTo(Hero::class);
+    }
+
+    public function media()
+    {
+
+        return $this->hasOne(Media::class);
+    }
+
+    public function merchants()
+    {
+
+        return $this->belongsToMany(Merchant::class);
+    }
+
+    public function monsters()
+    {
+
+        return $this->belongsToMany(Monster::class);
+    }
+
+    public function tags()
+    {
+
+        return $this->belongsToMany(Tag::class);
+    }
+
+    public function tier()
+    {
+
+        return $this->belongsTo(Tier::class);
+    }
 }
