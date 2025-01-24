@@ -7,8 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-    
+
     use HasFactory;
+
+    protected $fillable = [
+        'hero_id',
+        'min_tier_id',
+        'item_name',
+        // Altri campi...
+    ];
 
     ///// Relations /////
 
@@ -56,9 +63,16 @@ class Item extends Model
         return $this->belongsToMany(Tag::class);
     }
 
-    public function tier()
+    // Relazione al tier minimo
+    public function minTier()
     {
+        return $this->belongsTo(Tier::class, 'min_tier_id');
+    }
 
-        return $this->belongsTo(Tier::class);
+    // Relazione many-to-many per tiers
+    public function tiers()
+    {
+        return $this->belongsToMany(Tier::class, 'effect_item')
+            ->withPivot('effect_id', 'value');
     }
 }

@@ -9,10 +9,16 @@ class Tier extends Model
 {
     use HasFactory;
 
+    public function effects()
+    {
+        
+        return $this->hasManyThrough(Effect::class, EffectItem::class);
+    }
+
     public function items()
     {
 
-        return $this->hasMany(Item::class);
+        return $this->hasMany(Item::class, 'min_tier_id');
     }
 
     public function media()
@@ -42,6 +48,6 @@ class Tier extends Model
     public function skills()
     {
 
-        return $this->hasMany(Skill::class);
+        return $this->hasMany(Skill::class, 'min_tier_id');
     }
 }
