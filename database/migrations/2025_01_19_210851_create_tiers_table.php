@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
 
             $table->enum('tier_label', ['bronze', 'silver', 'gold', 'diamond']);
-            $table->enum('tier_size', ['small', 'medium', 'large']);
+            $table->enum('tier_size', ['small', 'medium', 'large'])->nullable();
             
             $table->timestamps();
         });
