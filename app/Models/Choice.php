@@ -13,7 +13,7 @@ class Choice extends Model
 
     public function encounters()
     {
-        return $this->belongsToMany(Encounter::class, 'choise_encounter')
+        return $this->belongsToMany(Encounter::class, 'choice_encounter')
             ->withPivot('value');
     }
 
