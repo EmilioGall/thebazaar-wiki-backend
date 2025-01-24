@@ -15,6 +15,7 @@ return new class extends Migration
 
             $table->foreignId('effect_id')->constrained()->onDelete('cascade');
             $table->foreignId('item_id')->constrained()->onDelete('cascade');
+            $table->foreignId('tier_id')->constrained('tiers')->onDelete('cascade');
             $table->primary(['effect_id', 'item_id']);
 
             $table->bigInteger('value')->nullable();

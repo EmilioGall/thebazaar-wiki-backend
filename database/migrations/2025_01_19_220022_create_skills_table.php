@@ -15,7 +15,7 @@ return new class extends Migration
 
             $table->id();
             $table->foreignId('hero_id')->constrained()->onDelete('cascade')->onUpdate('cascade')->nullable();
-            $table->foreignId('tier_id')->constrained()->onDelete('cascade')->onUpdate('cascade')->nullable();
+            $table->foreignId('min_tier_id')->nullable()->constrained('tiers')->onUpdate('cascade')->onDelete('set null');
             $table->foreignId('effect_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
 
             $table->string('skill_name');

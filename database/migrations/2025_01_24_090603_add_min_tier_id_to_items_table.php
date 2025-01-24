@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::table('items', function (Blueprint $table) {
 
-            $table->foreignId('tier_id')->nullable()->after('hero_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('min_tier_id')->nullable()->after('hero_id')->constrained('tiers')->onUpdate('cascade')->onDelete('set null');
 
-            $table->dropColumn('item_size'); // Uncomment to drop item_size if it existed.
+            $table->dropColumn('item_size'); // Drop item_size if it existed.
 
         });
     }
@@ -27,8 +27,8 @@ return new class extends Migration
     {
         Schema::table('items', function (Blueprint $table) {
 
-            $table->dropForeign(['tier_id']);
-            $table->dropColumn('tier_id');
+            $table->dropForeign(['min_tier_id']);
+            $table->dropColumn('min_tier_id');
 
         });
     }
