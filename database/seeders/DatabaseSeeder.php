@@ -17,6 +17,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
 
             HeroesTableSeeder::class,
+            TiersTableSeeder::class,
+            TagsTableSeeder::class,
+            EnchantmentsTableSeeder::class,
+            ShopsTableSeeder::class,
+            ShopTierTableSeeder::class,
 
         ]);
 
