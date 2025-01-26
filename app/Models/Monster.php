@@ -11,6 +11,12 @@ class Monster extends Model
 
     ///// Relations /////
 
+    public function days()
+    {
+
+        return $this->belongsToMany(Day::class, 'day_monster');
+    }
+
     public function items()
     {
 

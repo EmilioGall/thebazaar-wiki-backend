@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('monster_name');
             $table->string('monster_name_it')->nullable();
             $table->string('monster_name_fr')->nullable();
-            $table->bigInteger('monster_day')->nullable();
             
             $table->timestamps();
         });
