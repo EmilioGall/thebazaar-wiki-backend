@@ -21,6 +21,7 @@ class EnchantmentsTableSeeder extends Seeder
             ['enchantment_name' => 'Golden', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
             ['enchantment_name' => 'Heavy', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
             ['enchantment_name' => 'Icy', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
+            ['enchantment_name' => 'Obsidian', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
             ['enchantment_name' => 'Restorative', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
             ['enchantment_name' => 'Shielded', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
             ['enchantment_name' => 'Shiny', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
