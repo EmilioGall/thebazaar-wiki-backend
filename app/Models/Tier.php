@@ -39,10 +39,10 @@ class Tier extends Model
         return $this->hasMany(Monster::class);
     }
 
-    public function shops()
+    public function days()
     {
 
-        return $this->belongsToMany(Shop::class);
+        return $this->belongsToMany(Day::class);
     }
 
     public function skills()
