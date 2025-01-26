@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('shop_tier', function (Blueprint $table) {
+        Schema::create('day_tier', function (Blueprint $table) {
 
-            $table->foreignId('shop_id')->constrained()->onDelete('cascade');
+            $table->foreignId('day_id')->constrained()->onDelete('cascade');
             $table->foreignId('tier_id')->constrained()->onDelete('cascade');
-            $table->primary(['shop_id', 'tier_id']);
+            $table->primary(['day_id', 'tier_id']);
 
             $table->bigInteger('probability')->nullable();
         });
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('shop_tier');
+        Schema::dropIfExists('day_tier');
     }
 };
