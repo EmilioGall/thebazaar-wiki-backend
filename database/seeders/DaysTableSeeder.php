@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Shop;
+use App\Models\Day;
 
-class ShopsTableSeeder extends Seeder
+class DaysTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,11 +16,11 @@ class ShopsTableSeeder extends Seeder
         
         for ($i=0; $i < 10; $i++) { 
 
-            $newShopDay = new Shop();
+            $newDay = new Day();
 
-            $newShopDay->shop_day = $i+1;
+            $newDay->day_number = $i+1;
 
-            $newShopDay->save();
+            $newDay->save();
 
         }
     }

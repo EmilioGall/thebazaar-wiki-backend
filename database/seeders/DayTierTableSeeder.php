@@ -5,10 +5,10 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Tier;
-use App\Models\Shop;
+use App\Models\Day;
 use Illuminate\Support\Facades\DB;
 
-class ShopTierTableSeeder extends Seeder
+class DayTierTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -32,13 +32,13 @@ class ShopTierTableSeeder extends Seeder
         // Inizialize tiers id
         $tiers = Tier::all()->keyBy('tier_label')->toArray();
 
-        foreach ($probabilities as $day => $probs) {
+        foreach ($probabilities as $curDay => $probs) {
 
-            $shop = Shop::find($day);
+            $day = Day::find($curDay);
 
-            if ($shop) {
+            if ($day) {
 
-                $shopId = $shop->id;
+                $dayId = $day->id;
 
                 foreach ($probs as $tierIndex => $probability) {
 
@@ -48,9 +48,9 @@ class ShopTierTableSeeder extends Seeder
 
                         $tierKey = $tierKeys[$tierIndex];
 
-                        DB::table('shop_tier')->insert([
+                        DB::table('day_tier')->insert([
 
-                            'shop_id' => $shopId,
+                            'day_id' => $dayId,
 
                             'tier_id' => $tiers[$tierKey]['id'],
 

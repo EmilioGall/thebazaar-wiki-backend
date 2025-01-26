@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
             TiersTableSeeder::class,
             TagsTableSeeder::class,
             EnchantmentsTableSeeder::class,
-            ShopsTableSeeder::class,
-            ShopTierTableSeeder::class,
+            DaysTableSeeder::class,
+            DayTierTableSeeder::class,
 
         ]);
 
