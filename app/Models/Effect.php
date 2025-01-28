@@ -14,24 +14,18 @@ class Effect extends Model
     public function enchantments()
     {
 
-        return $this->belongsToMany(Enchantment::class, 'effect_enchantment')->withPivot('value');
+        return $this->belongsToMany(Enchantment::class, 'effect_enchantment')->withPivot('primary_value', 'secondary_value');
     }
 
-    public function items()
+    public function itemTiers()
     {
 
-        return $this->belongsToMany(Item::class, 'effect_item')->withPivot('tier_id', 'value');
+        return $this->belongsToMany(ItemTier::class);
     }
 
-    public function skills()
+    public function skillTiers()
     {
-
-        return $this->belongsToMany(Skill::class, 'effect_skill')->withPivot('tier_id', 'value');
-    }
-
-    public function tags()
-    {
-
-        return $this->belongsToMany(Tag::class);
+        
+        return $this->belongsToMany(SkillTier::class);
     }
 }

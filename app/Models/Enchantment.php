@@ -11,17 +11,16 @@ class Enchantment extends Model
 
     ///// Relations /////
 
-    public function effect()
+    public function effects()
     {
-        return $this->belongsToMany(Effect::class, 'effect_enchantment')
-            ->withPivot('value');
+
+        return $this->belongsToMany(Effect::class, 'effect_enchantment')->withPivot('primary_value', 'secondary_value');
     }
 
     public function items()
     {
 
-        return $this->belongsToMany(Item::class, 'enchantment_item')
-            ->withPivot('value');
+        return $this->belongsToMany(Item::class, 'enchantment_item');
     }
 
     public function tag()

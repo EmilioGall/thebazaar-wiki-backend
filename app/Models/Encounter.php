@@ -13,19 +13,13 @@ class Encounter extends Model
 
     public function choices()
     {
-        return $this->belongsToMany(Choice::class, 'choice_encounter')
-            ->withPivot('value');
-    }
-
-    public function media()
-    {
-
-        return $this->hasOne(Media::class);
+        
+        return $this->belongsToMany(Choice::class, 'choice_encounter')->withPivot('primary_value', 'secondary_value');
     }
 
     public function tags()
     {
 
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsToMany(Tag::class, 'encounter_tag');
     }
 }

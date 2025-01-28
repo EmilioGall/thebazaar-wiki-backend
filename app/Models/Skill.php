@@ -9,48 +9,46 @@ class Skill extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'hero_id',
-        'min_tier_id',
-        'skill_name',
-        // Altri campi...
-    ];
-
-    public function effects()
-    {
-
-        return $this->belongsToMany(Effect::class, 'effect_skill')
-            ->withPivot('value');
-    }
-
     public function heroes()
     {
         
         return $this->belongsTo(Hero::class);
     }
 
-    public function media()
+    public function merchants()
     {
 
-        return $this->hasOne(Media::class);
+        return $this->belongsToMany(Merchant::class, 'merchant_skill');
+    }
+
+    public function monsters()
+    {
+
+        return $this->belongsToMany(Monster::class, 'monster_skill');
     }
 
     public function tags()
     {
 
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsToMany(Tag::class, 'tag_tier');
     }
 
     // Relazione al tier minimo
     public function minTier()
     {
-        return $this->belongsTo(Tier::class, 'min_tier_id');
+        return $this->belongsTo(Tier::class);
     }
 
     // Relazione many-to-many per tiers
     public function tiers()
     {
-        return $this->belongsToMany(Tier::class, 'effect_skill')
-                    ->withPivot('effect_id', 'value');
+
+        return $this->belongsToMany(Tier::class, 'skill_tier')->withPivot('effect_id');
+    }
+
+    public function effects()
+    {
+
+        return $this->hasManyThrough(Effect::class, SkillTier::class);
     }
 }

@@ -14,25 +14,25 @@ class Monster extends Model
     public function days()
     {
 
-        return $this->belongsToMany(Day::class, 'day_monster');
+        return $this->belongsTo(Day::class);
     }
 
     public function items()
     {
 
-        return $this->belongsToMany(Item::class);
+        return $this->belongsToMany(Item::class, 'monster_item');
     }
 
-    public function media()
+    public function skills()
     {
 
-        return $this->hasOne(Media::class);
+        return $this->belongsToMany(Skill::class, 'monster_skill');
     }
 
     public function tags()
     {
 
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsToMany(Tag::class, 'monster_tag');
     }
 
     public function tier()

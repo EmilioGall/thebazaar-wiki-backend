@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hero extends Model
 {
-
     use HasFactory;
 
     ///// Relations /////
@@ -16,12 +15,6 @@ class Hero extends Model
     {
 
         return $this->hasMany(Item::class);
-    }
-
-    public function media()
-    {
-
-        return $this->hasMany(Media::class);
     }
 
     public function skills()

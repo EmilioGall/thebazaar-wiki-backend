@@ -14,12 +14,12 @@ class Day extends Model
     public function monsters()
     {
 
-        return $this->belongsToMany(Monster::class, 'day_monster');
+        return $this->belongsToMany(Monster::class);
     }
 
     public function tiers()
     {
 
-        return $this->belongsToMany(Tier::class);
+        return $this->belongsToMany(Tier::class, 'day_tier')->withPivot('probability');
     }
 }

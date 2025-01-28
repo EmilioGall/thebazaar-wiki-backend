@@ -9,22 +9,22 @@ class Tier extends Model
 {
     use HasFactory;
 
-    public function effects()
+    public function days()
     {
-        
-        return $this->hasManyThrough(Effect::class, EffectItem::class);
+
+        return $this->belongsToMany(Day::class, 'day_tier')->withPivot('probability');
     }
 
     public function items()
     {
 
-        return $this->hasMany(Item::class, 'min_tier_id');
+        return $this->belongsToMany(Item::class, 'item_tier')->withPivot('effect_id');
     }
 
-    public function media()
+    public function itemsAsMinTier()
     {
 
-        return $this->hasMany(Media::class);
+        return $this->hasMany(Item::class, 'min_tier_id');
     }
 
     public function merchants()
@@ -39,15 +39,15 @@ class Tier extends Model
         return $this->hasMany(Monster::class);
     }
 
-    public function days()
-    {
-
-        return $this->belongsToMany(Day::class);
-    }
-
     public function skills()
     {
 
+        return $this->belongsToMany(Skill::class, 'skill_tier')->withPivot('effect_id');
+    }
+
+    public function skillsAsMinTier()
+    {
+        
         return $this->hasMany(Skill::class, 'min_tier_id');
     }
 }

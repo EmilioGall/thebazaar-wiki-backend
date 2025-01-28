@@ -14,19 +14,19 @@ class Merchant extends Model
     public function items()
     {
 
-        return $this->belongsToMany(Item::class);
+        return $this->belongsToMany(Item::class, 'merchant_item');
     }
 
-    public function media()
+    public function skills()
     {
 
-        return $this->hasOne(Media::class);
+        return $this->belongsToMany(Skill::class, 'merchant_skill');
     }
 
     public function tags()
     {
 
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsToMany(Tag::class, 'merchant_tag');
     }
 
     public function tier()
