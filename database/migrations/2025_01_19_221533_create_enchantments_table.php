@@ -14,10 +14,9 @@ return new class extends Migration
         Schema::create('enchantments', function (Blueprint $table) {
 
             $table->id();
+            $table->foreignId('tag_id')->constrained()->onDelete('set null')->onUpdate('cascade')->nullable();
 
-            $table->string('enchantment_name', 255)->unique()->nullable();
-            $table->string('enchantment_name_it', 255)->unique()->nullable();
-            $table->string('enchantment_name_fr', 255)->unique()->nullable();
+            $table->string('enchantment_name', 255)->unique();
 
             $table->timestamps();
         });

@@ -14,11 +14,10 @@ return new class extends Migration
         Schema::create('merchants', function (Blueprint $table) {
 
             $table->id();
-            $table->foreignId('tier_id')->constrained()->onDelete('cascade')->onUpdate('cascade')->nullable();
+            $table->foreignId('tier_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade')->nullable();
 
-            $table->string('merchant_name');
-            $table->string('merchant_name_it')->nullable();
-            $table->string('merchant_name_fr')->nullable();
+            $table->string('merchant_name')->unique();
+            $table->string('merchant_img')->unique()->nullable();
             $table->bigInteger('reroll_cost')->nullable();
         
             $table->timestamps();

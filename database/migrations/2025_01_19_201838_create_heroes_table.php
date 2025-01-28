@@ -16,9 +16,8 @@ return new class extends Migration
             $table->id();
 
             $table->string('hero_name', 255)->unique();
+            $table->string('hero_img', 255)->unique()->nullable();
             $table->text('hero_description')->nullable();
-            $table->text('hero_description_it')->nullable();
-            $table->text('hero_description_fr')->nullable();
 
             $table->timestamps();
 

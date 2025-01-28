@@ -16,12 +16,9 @@ return new class extends Migration
             $table->id();
             
             $table->string('choise_name', 255)->unique()->nullable();
-            $table->string('choise_name_it', 255)->unique()->nullable();
-            $table->string('choise_name_fr', 255)->unique()->nullable();
-            $table->text('choise_description');
-            $table->text('choise_description_it')->nullable();
-            $table->text('choise_description_fr')->nullable();
-            
+            $table->string('choise_img', 255)->unique()->nullable();
+            $table->string('choise_description', 255)->unique();
+
             $table->timestamps();
 
         });

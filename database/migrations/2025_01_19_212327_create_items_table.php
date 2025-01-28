@@ -14,14 +14,15 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
 
             $table->id();
-            $table->foreignId('hero_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('hero_id')->nullable()->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('min_tier_id')->nullable()->constrained('tiers')->onUpdate('cascade')->onDelete('set null');
 
-            $table->string('item_name', 255);
-            $table->string('item_name_it', 255)->nullable();
-            $table->string('item_name_fr', 255)->nullable();
-            $table->boolean('item_state')->default(false)->nullable();
+            $table->string('item_name', 255)->unique();
+            $table->string('item_img')->unique()->nullable();
+            $table->boolean('item_state')->default(false);
             $table->unsignedBigInteger('item_cooldown')->nullable();
+            $table->unsignedBigInteger('item_max_ammo')->nullable();
+            $table->unsignedBigInteger('item_multicast')->nullable();
 
             $table->timestamps();
         });

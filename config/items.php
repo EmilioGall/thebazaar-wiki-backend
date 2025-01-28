@@ -16,7 +16,7 @@ return [
 
       'tags' => ['shield', 'economy', 'tool'],
 
-      'effect_1' => '{ Shield } equal to { n } the value of the adjacent items.',
+      'effect_1' => '{ Shield } equal to { n }x the value of the adjacent items.',
       'value1_bronze' => null,
       'value1_silver' => null,
       'value1_gold' => 1,

@@ -15,15 +15,9 @@ return new class extends Migration
 
             $table->id();
 
-            $table->string('effect_name', 255)->unique()->nullable();
-            $table->string('effect_name_it', 255)->unique()->nullable();
-            $table->string('effect_name_fr', 255)->unique()->nullable();
-            $table->text('effect_description');
-            $table->text('effect_description_it')->nullable();
-            $table->text('effect_description_fr')->nullable();
+            $table->string('effect_description', 255)->unique();
 
             $table->timestamps();
-
         });
     }
 

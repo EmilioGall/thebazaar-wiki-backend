@@ -16,8 +16,7 @@ return new class extends Migration
             $table->id();
             
             $table->string('encounter_name', 255)->unique();
-            $table->string('encounter_name_it', 255)->unique()->nullable();
-            $table->string('encounter_name_fr', 255)->unique()->nullable();
+            $table->string('encounter_img', 255)->unique()->nullable();
             
             $table->timestamps();
             

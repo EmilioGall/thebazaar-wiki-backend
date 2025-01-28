@@ -16,12 +16,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('hero_id')->constrained()->onDelete('cascade')->onUpdate('cascade')->nullable();
             $table->foreignId('min_tier_id')->nullable()->constrained('tiers')->onUpdate('cascade')->onDelete('set null');
-            $table->foreignId('effect_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
 
-            $table->string('skill_name');
-            $table->string('skill_name_it')->nullable();
-            $table->string('skill_name_fr')->nullable();
-            $table->text('skill_description');
+            $table->string('skill_name')->unique();
+            $table->string('skill_img')->unique()->nullable();
 
             $table->timestamps();
         });
