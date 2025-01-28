@@ -11,18 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('item_merchant', function (Blueprint $table) {
+        Schema::create('item_tier', function (Blueprint $table) {
+
+            $table->id();
 
             // Foreign key
             $table->unsignedBigInteger('item_id');
             $table->foreign('item_id')->references('id')->on('items')->cascadeOnDelete();
 
             // Foreign key
-            $table->unsignedBigInteger('merchant_id');
-            $table->foreign('merchant_id')->references('id')->on('merchants')->cascadeOnDelete();
+            $table->unsignedBigInteger('tier_id');
+            $table->foreign('tier_id')->references('id')->on('tiers')->cascadeOnDelete();
 
-            // Primary key
-            $table->primary(['item_id', 'merchant_id']);
+            // Unique key
+            $table->unique(['item_id', 'tier_id']);
+
+            $table->timestamps();
         });
     }
 
@@ -31,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('item_merchant');
+        Schema::dropIfExists('item_tier');
     }
 };

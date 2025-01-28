@@ -13,11 +13,18 @@ return new class extends Migration
     {
         Schema::create('day_tier', function (Blueprint $table) {
 
-            $table->foreignId('day_id')->constrained()->onDelete('cascade');
-            $table->foreignId('tier_id')->constrained()->onDelete('cascade');
-            $table->primary(['day_id', 'tier_id']);
-
             $table->bigInteger('probability')->nullable();
+
+            // Foreign key
+            $table->unsignedBigInteger('day_id');
+            $table->foreign('day_id')->references('id')->on('days')->cascadeOnDelete();
+
+            // Foreign key
+            $table->unsignedBigInteger('tier_id');
+            $table->foreign('tier_id')->references('id')->on('tiers')->cascadeOnDelete();
+
+            // Unique key
+            $table->unique(['day_id', 'tier_id', 'probability']);
         });
     }
 

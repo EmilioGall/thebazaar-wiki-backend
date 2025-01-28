@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('enchantment_item', function (Blueprint $table) {
 
-            // set foreign key houses
+            // Foreign key
             $table->unsignedBigInteger('enchantment_id');
             $table->foreign('enchantment_id')->references('id')->on('enchantments')->cascadeOnDelete();
 
-            // set foreign key services
+            // Foreign key
             $table->unsignedBigInteger('item_id');
             $table->foreign('item_id')->references('id')->on('items')->cascadeOnDelete();
 
-            // set primary key
+            // Primary key
             $table->primary(['enchantment_id', 'item_id']);
         });
     }

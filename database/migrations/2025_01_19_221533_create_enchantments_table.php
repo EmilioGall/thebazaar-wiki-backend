@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('enchantments', function (Blueprint $table) {
 
             $table->id();
-            $table->foreignId('tag_id')->constrained()->onDelete('set null')->onUpdate('cascade')->nullable();
+            $table->foreignId('tag_id')->nullable()->constrained('tags')->onDelete('set null')->onUpdate('cascade');
 
             $table->string('enchantment_name', 255)->unique();
 

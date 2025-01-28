@@ -11,20 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('effect_enchantments', function (Blueprint $table) {
+        Schema::create('effect_skill_tier', function (Blueprint $table) {
 
-            $table->bigInteger('value')->nullable();
+            $table->bigInteger('primary_value')->nullable();
+            $table->bigInteger('secondary_value')->nullable();
 
             // Foreign key
             $table->unsignedBigInteger('effect_id');
             $table->foreign('effect_id')->references('id')->on('effects')->cascadeOnDelete();
 
             // Foreign key
-            $table->unsignedBigInteger('enchantment_id');
-            $table->foreign('enchantment_id')->references('id')->on('enchantments')->cascadeOnDelete();
+            $table->unsignedBigInteger('skill_tier_id');
+            $table->foreign('skill_tier_id')->references('id')->on('skill_tier')->cascadeOnDelete();
 
-            // Unique index
-            $table->unique(['effect_id', 'enchantment_id', 'value']);
+            // Primary key
+            $table->primary(['effect_id', 'skill_tier_id']);
         });
     }
 
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('effect_enchantments');
+        Schema::dropIfExists('effect_skill_tier');
     }
 };

@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('day_monster', function (Blueprint $table) {
-
-            // Foreign key
-            $table->unsignedBigInteger('day_id');
-            $table->foreign('day_id')->references('id')->on('days')->cascadeOnDelete();
+        Schema::create('monster_skill', function (Blueprint $table) {
 
             // Foreign key
             $table->unsignedBigInteger('monster_id');
             $table->foreign('monster_id')->references('id')->on('monsters')->cascadeOnDelete();
 
-            // Unique index
-            $table->unique(['day_id', 'monster_id']);
+            // Foreign key
+            $table->unsignedBigInteger('skill_id');
+            $table->foreign('skill_id')->references('id')->on('skills')->cascadeOnDelete();
+
+            // Primary key
+            $table->primary(['monster_id', 'skill_id']);
         });
     }
 
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('day_monster');
+        Schema::dropIfExists('monster_skill');
     }
 };

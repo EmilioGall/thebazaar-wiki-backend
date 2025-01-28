@@ -13,8 +13,15 @@ return new class extends Migration
     {
         Schema::create('encounter_tag', function (Blueprint $table) {
 
-            $table->foreignId('encounter_id')->constrained()->onDelete('cascade');
-            $table->foreignId('tag_id')->constrained()->onDelete('cascade');
+            // Foreign key
+            $table->unsignedBigInteger('encounter_id');
+            $table->foreign('encounter_id')->references('id')->on('encounters')->cascadeOnDelete();
+
+            // Foreign key
+            $table->unsignedBigInteger('tag_id');
+            $table->foreign('tag_id')->references('id')->on('tags')->cascadeOnDelete();
+
+            // Primary key
             $table->primary(['encounter_id', 'tag_id']);
         });
     }

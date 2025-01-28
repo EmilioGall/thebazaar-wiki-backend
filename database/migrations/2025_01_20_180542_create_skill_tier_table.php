@@ -11,18 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('skill_tag', function (Blueprint $table) {
+        Schema::create('skill_tier', function (Blueprint $table) {
+
+            $table->id();
 
             // Foreign key
             $table->unsignedBigInteger('skill_id');
             $table->foreign('skill_id')->references('id')->on('skills')->cascadeOnDelete();
 
             // Foreign key
-            $table->unsignedBigInteger('tag_id');
-            $table->foreign('tag_id')->references('id')->on('tags')->cascadeOnDelete();
+            $table->unsignedBigInteger('tier_id');
+            $table->foreign('tier_id')->references('id')->on('tiers')->cascadeOnDelete();
 
-            // Primary key
-            $table->primary(['skill_id', 'tag_id']);
+            // Unique key
+            $table->unique(['skill_id', 'tier_id']);
+
+            $table->timestamps();
         });
     }
 
@@ -31,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('skill_tag');
+        Schema::dropIfExists('skill_tier');
     }
 };

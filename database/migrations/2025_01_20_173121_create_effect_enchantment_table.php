@@ -11,21 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('choice_encounter', function (Blueprint $table) {
+        Schema::create('effect_enchantments', function (Blueprint $table) {
 
             $table->bigInteger('primary_value')->nullable();
             $table->bigInteger('secondary_value')->nullable();
 
             // Foreign key
-            $table->unsignedBigInteger('choice_id');
-            $table->foreign('choice_id')->references('id')->on('choices')->cascadeOnDelete();
+            $table->unsignedBigInteger('effect_id');
+            $table->foreign('effect_id')->references('id')->on('effects')->cascadeOnDelete();
 
             // Foreign key
-            $table->unsignedBigInteger('encounter_id');
-            $table->foreign('encounter_id')->references('id')->on('encounters')->cascadeOnDelete();
+            $table->unsignedBigInteger('enchantment_id');
+            $table->foreign('enchantment_id')->references('id')->on('enchantments')->cascadeOnDelete();
 
-            // Primary key
-            $table->primary(['choice_id', 'encounter_id']);
+            // Unique index
+            $table->unique(['effect_id', 'enchantment_id']);
         });
     }
 
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('choice_encounter');
+        Schema::dropIfExists('effect_enchantments');
     }
 };
