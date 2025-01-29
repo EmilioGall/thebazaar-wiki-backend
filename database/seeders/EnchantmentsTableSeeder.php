@@ -16,17 +16,17 @@ class EnchantmentsTableSeeder extends Seeder
 
         $enchantments = [
 
-            ['enchantment_name' => 'Deadly', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
-            ['enchantment_name' => 'Fiery', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
-            ['enchantment_name' => 'Golden', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
-            ['enchantment_name' => 'Heavy', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
-            ['enchantment_name' => 'Icy', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
-            ['enchantment_name' => 'Obsidian', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
-            ['enchantment_name' => 'Restorative', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
-            ['enchantment_name' => 'Shielded', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
-            ['enchantment_name' => 'Shiny', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
-            ['enchantment_name' => 'Toxic', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
-            ['enchantment_name' => 'Turbo', 'enchantment_name_it' => null, 'enchantment_name_fr' => null],
+            ['enchantment_name' => 'Deadly', 'tag_id' => 11],
+            ['enchantment_name' => 'Fiery', 'tag_id' => 1],
+            ['enchantment_name' => 'Golden', 'tag_id' => 19],
+            ['enchantment_name' => 'Heavy', 'tag_id' => 9],
+            ['enchantment_name' => 'Icy', 'tag_id' => 4],
+            ['enchantment_name' => 'Obsidian', 'tag_id' => 16],
+            ['enchantment_name' => 'Restorative', 'tag_id' => 6],
+            ['enchantment_name' => 'Shielded', 'tag_id' => 8],
+            ['enchantment_name' => 'Shiny', 'tag_id' => null],
+            ['enchantment_name' => 'Toxic', 'tag_id' => 7],
+            ['enchantment_name' => 'Turbo', 'tag_id' => 5],
             
         ];
 
@@ -35,8 +35,7 @@ class EnchantmentsTableSeeder extends Seeder
             $newEnchantment = new Enchantment();
 
             $newEnchantment->enchantment_name = $enchantment['enchantment_name'];
-            $newEnchantment->enchantment_name_it = $enchantment['enchantment_name_it'];
-            $newEnchantment->enchantment_name_fr = $enchantment['enchantment_name_fr'];
+            $newEnchantment->tag_id = $enchantment['tag_id'];
 
             $newEnchantment->save();
         }
