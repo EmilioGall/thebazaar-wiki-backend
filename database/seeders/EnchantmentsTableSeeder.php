@@ -35,7 +35,7 @@ class EnchantmentsTableSeeder extends Seeder
             $newEnchantment = new Enchantment();
 
             $newEnchantment->enchantment_name = $enchantment['enchantment_name'];
-            $newEnchantment->tag_id = $enchantment['tag_id'];
+            $newEnchantment->tag_id = $enchantment['tag_id'] ?? null;
 
             $newEnchantment->save();
         }
