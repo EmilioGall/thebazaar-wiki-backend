@@ -18,6 +18,7 @@ return new class extends Migration
 
             $table->string('monster_name')->unique();
             $table->string('monster_img')->unique()->nullable();
+            $table->bigInteger('monster_health')->nullable();
 
             $table->timestamps();
         });
