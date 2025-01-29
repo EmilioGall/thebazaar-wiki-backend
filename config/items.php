@@ -5,16 +5,16 @@ return [
    // Abacus
    [
       'item_name' => 'Abacus',
-      'item_name_it' => null,
-      'item_name_fr' => null,
+      'item_img' => null,
       'item_state' => true,
       'item_cooldown' => 4,
       'item_max_ammo' => null,
+      'item_multicast' => null,
 
       'hero_id' => 5, // Pygmalien
       'min_tier_id' => 3, // Gold - Small
 
-      'tags' => ['shield', 'economy', 'tool'],
+      'tags_id' => [ 8, 26, 35], // ['shield', 'economy', 'tool']
 
       'effect_1' => '{ Shield } equal to { n }x the value of the adjacent items.',
       'value1_bronze' => null,
@@ -46,16 +46,16 @@ return [
    // Agility Boots
    [
       'item_name' => 'Agility Boots',
-      'item_name_it' => null,
-      'item_name_fr' => null,
+      'item_img' => null,
       'item_state' => false,
       'item_cooldown' => null,
       'item_max_ammo' => null,
+      'item_multicast' => null,
 
       'hero_id' => 1, // Common
       'min_tier_id' => 1, // Bronze - Small
 
-      'tags' => ['crit'],
+      'tags_id' => [11], // ['crit']
 
       'effect_1' => 'Adjacent items have +{ n }% { Crit } chance.',
       'value1_bronze' => 3,
@@ -87,16 +87,16 @@ return [
    // Alpha Ray
    [
       'item_name' => 'Alpha Ray',
-      'item_name_it' => null,
-      'item_name_fr' => null,
+      'item_img' => null,
       'item_state' => true,
       'item_cooldown' => 5,
       'item_max_ammo' => null,
+      'item_multicast' => null,
 
       'hero_id' => 2, // Dooley
       'min_tier_id' => 1, // Bronze - Small
 
-      'tags' => ['damage', 'ray', 'weapon'],
+      'tag_id' => [3, 33, 39], // ['damage', 'ray', 'weapon']
 
       'effect_1' => 'Deal { n } { Damage }.',
       'value1_bronze' => 5,
@@ -128,16 +128,16 @@ return [
    // Amber
    [
       'item_name' => 'Amber',
-      'item_name_it' => null,
-      'item_name_fr' => null,
+      'item_img' => null,
       'item_state' => true,
       'item_cooldown' => 5,
       'item_max_ammo' => null,
+      'item_multicast' => null,
 
       'hero_id' => 4, // Mak
       'min_tier_id' => 2, // Silver - Small
 
-      'tags' => ['slow'],
+      'tags_id' => [9], // ['slow']
 
       'effect_1' => '{ Slow } { n } items for 3 second(s).',
       'value1_bronze' => null,
@@ -169,16 +169,16 @@ return [
    // Ambergris 
    [
       'item_name' => 'Ambergris',
-      'item_name_it' => null,
-      'item_name_fr' => null,
+      'item_img' => null,
       'item_state' => true,
       'item_cooldown' => 6,
       'item_max_ammo' => null,
+      'item_multicast' => null,
 
       'hero_id' => 7, // Vanessa
       'min_tier_id' => 1, // Bronze - Small
 
-      'tags' => ['aquatic', 'economy', 'heal', 'value'],
+      'tags_id' => [22, 26, 6, 19], // ['aquatic', 'economy', 'heal', 'value']
 
       'effect_1' => "{ Heal } equal to { n }x this item's { Value }.",
       'value1_bronze' => 1,
@@ -210,16 +210,16 @@ return [
    // Anchor 
    [
       'item_name' => 'Anchor',
-      'item_name_it' => null,
-      'item_name_fr' => null,
+      'item_img' => null,
       'item_state' => true,
       'item_cooldown' => 12,
       'item_max_ammo' => null,
+      'item_multicast' => null,
 
       'hero_id' => 7, // Vanessa
       'min_tier_id' => 8, // Gold - Medium
 
-      'tags' => ['aquatic', 'damage', 'haste', 'weapon'],
+      'tags_id' => [22, 3, 5, 39], // ['aquatic', 'damage', 'haste', 'weapon']
 
       'effect_1' => "Deal { Damage } equal to { n }% of your enemy's Max Health.",
       'value1_bronze' => null,
@@ -251,16 +251,16 @@ return [
    // Angry Balloon Bot 
    [
       'item_name' => 'Angry Balloon Bot',
-      'item_name_it' => null,
-      'item_name_fr' => null,
+      'item_img' => null,
       'item_state' => true,
       'item_cooldown' => 3,
       'item_max_ammo' => null,
+      'item_multicast' => null,
 
       'hero_id' => 2, // Dooley
       'min_tier_id' => 7, // Silver - Medium
 
-      'tags' => ['damage', 'friend', 'shieldReference', 'weapon'],
+      'tags_id' => [3, 28, 49, 39], // ['damage', 'friend', 'shieldReference', 'weapon']
 
       'effect_1' => "Deal 10 { Damage }.",
       'value1_bronze' => null,
@@ -292,16 +292,16 @@ return [
    // Antimatter Chamber 
    [
       'item_name' => 'Antimatter Chamber',
-      'item_name_it' => null,
-      'item_name_fr' => null,
+      'item_img' => null,
       'item_state' => true,
       'item_cooldown' => 10,
       'item_max_ammo' => null,
+      'item_multicast' => null,
 
       'hero_id' => 2, // Dooley
       'min_tier_id' => 14, // Diamond - Large
 
-      'tags' => ['tech',],
+      'tags_id' => [34], // ['tech',]
 
       'effect_1' => "Destroy this and { n } small enemy items for the fight.",
       'value1_bronze' => null,
@@ -333,16 +333,16 @@ return [
    // Apropos Chapeau 
    [
       'item_name' => 'Apropos Chapeau',
-      'item_name_it' => null,
-      'item_name_fr' => null,
+      'item_img' => null,
       'item_state' => true,
       'item_cooldown' => 5,
       'item_max_ammo' => null,
+      'item_multicast' => null,
 
       'hero_id' => 5, // Pygmalien
       'min_tier_id' => 7, // Silver - Medium
 
-      'tags' => ['damageReference', 'shield'],
+      'tags_id' => [43, 8], //['damageReference', 'shield']
 
       'effect_1' => "{ Shield } { n }.",
       'value1_bronze' => null,
@@ -374,16 +374,16 @@ return [
    // Arbalest 
    [
       'item_name' => 'Arbalest',
-      'item_name_it' => null,
-      'item_name_fr' => null,
+      'item_img' => null,
       'item_state' => true,
       'item_cooldown' => 8,
       'item_max_ammo' => 1,
+      'item_multicast' => null,
 
       'hero_id' => 7, // Vanessa
       'min_tier_id' => 7, // Silver - Medium
 
-      'tags' => ['damage', 'hasteRefference', 'weapon'],
+      'tags' => [3, 45, 39], // ['damage', 'hasteRefference', 'weapon']
 
       'effect_1' => 'Deal { n } { Damage }.',
       'value1_bronze' => null,
