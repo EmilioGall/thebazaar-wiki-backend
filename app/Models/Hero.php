@@ -9,6 +9,14 @@ class Hero extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+
+        'hero_name',
+        'hero_img',
+        'hero_description'
+        
+    ];
+
     ///// Relations /////
 
     public function items()

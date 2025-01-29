@@ -9,10 +9,20 @@ class Tag extends Model
 {
     use HasFactory;
 
-    public function enchantment()
+    protected $fillable = [
+
+        'tag_name',
+        'tag_icon',
+        'tag_type'
+
+    ];
+
+    ///// Relations /////
+
+    public function enchantments()
     {
 
-        return $this->belongsTo(Enchantment::class);
+        return $this->hasMany(Enchantment::class);
     }
 
     public function encounters()

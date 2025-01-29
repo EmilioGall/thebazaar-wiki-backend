@@ -9,12 +9,18 @@ class Day extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+
+        'day_number'
+
+    ];
+
     ///// Relations /////
 
     public function monsters()
     {
 
-        return $this->belongsToMany(Monster::class);
+        return $this->hasMany(Monster::class);
     }
 
     public function tiers()

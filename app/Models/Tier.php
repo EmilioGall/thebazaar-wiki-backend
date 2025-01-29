@@ -9,6 +9,14 @@ class Tier extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+
+        'tier_label',
+        'tier_frame',
+        'tier_size'
+
+    ];
+
     public function days()
     {
 
@@ -47,7 +55,7 @@ class Tier extends Model
 
     public function skillsAsMinTier()
     {
-        
+
         return $this->hasMany(Skill::class, 'min_tier_id');
     }
 }

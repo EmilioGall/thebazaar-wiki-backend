@@ -9,6 +9,14 @@ class Choice extends Model
 {
     use HasFactory;
 
+    protected $fillable =[
+
+        'choise_name',
+        'choise_img',
+        'choise_description'
+        
+    ];
+
     ///// Relations /////
 
     public function encounters()

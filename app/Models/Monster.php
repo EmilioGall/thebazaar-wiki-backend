@@ -9,6 +9,14 @@ class Monster extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+
+        'tier_id',
+        'monster_name',
+        'monster_img'
+
+    ];
+
     ///// Relations /////
 
     public function days()
@@ -20,7 +28,7 @@ class Monster extends Model
     public function items()
     {
 
-        return $this->belongsToMany(Item::class, 'monster_item');
+        return $this->belongsToMany(Item::class, 'item_monster');
     }
 
     public function skills()

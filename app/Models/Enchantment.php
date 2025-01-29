@@ -9,6 +9,13 @@ class Enchantment extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+
+        'tag_id',
+        'enchantment_name'
+
+    ];
+
     ///// Relations /////
 
     public function effects()
@@ -26,6 +33,6 @@ class Enchantment extends Model
     public function tag()
     {
 
-        return $this->hasOne(Tag::class);
+        return $this->belongsTo(Tag::class);
     }
 }

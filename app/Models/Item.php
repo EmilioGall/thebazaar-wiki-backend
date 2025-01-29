@@ -9,6 +9,19 @@ class Item extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+
+        'hero_id',
+        'min_tier_id',
+        'item_name',
+        'item_img',
+        'item_state',
+        'item_cooldown',
+        'item_max_ammo',
+        'item_multicast'
+
+    ];
+
     ///// Relations /////
 
     public function enchantments()
@@ -26,13 +39,13 @@ class Item extends Model
     public function merchants()
     {
 
-        return $this->belongsToMany(Merchant::class, 'merchant_item');
+        return $this->belongsToMany(Merchant::class, 'item_merchant');
     }
 
     public function monsters()
     {
 
-        return $this->belongsToMany(Monster::class, 'monster_item');
+        return $this->belongsToMany(Monster::class, 'item_monster');
     }
 
     public function tags()
@@ -44,7 +57,8 @@ class Item extends Model
     // Relazione al tier minimo
     public function minTier()
     {
-        return $this->belongsTo(Tier::class);
+
+        return $this->belongsTo(Tier::class, 'min_tier_id');
     }
 
     // Relazione many-to-many per tiers

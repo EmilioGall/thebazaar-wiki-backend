@@ -9,12 +9,21 @@ class Merchant extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+
+        'tier_id',
+        'merchant_name',
+        'merchant_img',
+        'reroll_cost'
+
+    ];
+
     ///// Relations /////
 
     public function items()
     {
 
-        return $this->belongsToMany(Item::class, 'merchant_item');
+        return $this->belongsToMany(Item::class, 'item_merchant');
     }
 
     public function skills()

@@ -9,6 +9,13 @@ class Encounter extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+
+        'encounter_name',
+        'encounter_img'
+        
+    ];
+
     ///// Relations /////
 
     public function choices()

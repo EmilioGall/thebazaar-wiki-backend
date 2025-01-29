@@ -9,9 +9,20 @@ class Skill extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+
+        'hero_id',
+        'min_tier_id',
+        'skill_name',
+        'skill_img'
+
+    ];
+
+    ///// Relations /////
+
     public function heroes()
     {
-        
+
         return $this->belongsTo(Hero::class);
     }
 
@@ -30,13 +41,14 @@ class Skill extends Model
     public function tags()
     {
 
-        return $this->belongsToMany(Tag::class, 'tag_tier');
+        return $this->belongsToMany(Tag::class, 'skill_tag');
     }
 
     // Relazione al tier minimo
     public function minTier()
     {
-        return $this->belongsTo(Tier::class);
+
+        return $this->belongsTo(Tier::class, 'min_tier_id');
     }
 
     // Relazione many-to-many per tiers
