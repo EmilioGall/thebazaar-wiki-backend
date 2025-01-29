@@ -20,45 +20,38 @@ class HeroesTableSeeder extends Seeder
 
             [
                 'hero_name' => 'Common',
+                'hero_img' => null,
                 'hero_description' => null,
-                'hero_description_it' => null,
-                'hero_description_fr' => null,
             ],
             [
                 'hero_name' => 'Dooley',
+                'hero_img' => 'img/heroes/avata-dooley.webp',
                 'hero_description' => 'Dooley - Description',
-                'hero_description_it' => 'Dooley - Descrizione',
-                'hero_description_fr' => 'Dooley - Description',
             ],
             [
                 'hero_name' => 'Jules',
+                'hero_img' => 'img/heroes/avata-jules.webp',
                 'hero_description' => 'Jules - Description',
-                'hero_description_it' => 'Jules - Descrizione',
-                'hero_description_fr' => 'Jules - Description',
             ],
             [
                 'hero_name' => 'Mak',
+                'hero_img' => 'img/heroes/avata-mak.webp',
                 'hero_description' => 'Mak - Description',
-                'hero_description_it' => 'Mak - Descrizione',
-                'hero_description_fr' => 'Mak - Description',
             ],
             [
                 'hero_name' => 'Pygmalien',
+                'hero_img' => 'img/heroes/avata-pygmalien.webp',
                 'hero_description' => 'Pygmalien - Description',
-                'hero_description_it' => 'Pygmalien - Descrizione',
-                'hero_description_fr' => 'Pygmalien - Description',
             ],
             [
                 'hero_name' => 'Stelle',
+                'hero_img' => 'img/heroes/avata-stelle.webp',
                 'hero_description' => 'Stelle - Description',
-                'hero_description_it' => 'Stelle - Descrizione',
-                'hero_description_fr' => 'Stelle - Description',
             ],
             [
                 'hero_name' => 'Vanessa',
+                'hero_img' => 'img/heroes/avata-vanessa.webp',
                 'hero_description' => 'Vanessa - Description',
-                'hero_description_it' => 'Vanessa - Descrizione',
-                'hero_description_fr' => 'Vanessa - Description',
             ],
 
         ];
@@ -67,9 +60,8 @@ class HeroesTableSeeder extends Seeder
 
             Hero::create([
                 'hero_name' => $hero['hero_name'],
+                'hero_img' => $hero['hero_img'] ?? null,
                 'hero_description' => $hero['hero_description'] ?? null,
-                'hero_description_it' => $hero['hero_description_it'] ?? null,
-                'hero_description_fr' => $hero['hero_description_fr'] ?? null,
             ]);
         }
     }
