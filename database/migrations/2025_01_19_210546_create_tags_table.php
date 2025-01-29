@@ -15,8 +15,8 @@ return new class extends Migration
 
             $table->id();
 
-            $table->string('tag_name')->unique();
-            $table->string('tag_icon')->unique()->nullable();
+            $table->string('tag_name');
+            $table->string('tag_icon')->nullable();
             $table->enum('tag_type', ['action', 'category', 'effect', 'reference']);
 
             $table->timestamps();
