@@ -14,30 +14,50 @@ class EnchantmentsTableSeeder extends Seeder
     public function run(): void
     {
 
-        $enchantments = [
+        $itemEnchantments = config('enchantments');
 
-            ['enchantment_name' => 'Deadly', 'tag_id' => 11],
-            ['enchantment_name' => 'Fiery', 'tag_id' => 1],
-            ['enchantment_name' => 'Golden', 'tag_id' => 19],
-            ['enchantment_name' => 'Heavy', 'tag_id' => 9],
-            ['enchantment_name' => 'Icy', 'tag_id' => 4],
-            ['enchantment_name' => 'Obsidian', 'tag_id' => 16],
-            ['enchantment_name' => 'Restorative', 'tag_id' => 6],
-            ['enchantment_name' => 'Shielded', 'tag_id' => 8],
-            ['enchantment_name' => 'Shiny', 'tag_id' => null],
-            ['enchantment_name' => 'Toxic', 'tag_id' => 7],
-            ['enchantment_name' => 'Turbo', 'tag_id' => 5],
-            
-        ];
+        foreach ($itemEnchantments as $item) {
 
-        foreach ($enchantments as $enchantment) {
+            foreach ($item as $enchantment => $description) {
 
-            $newEnchantment = new Enchantment();
+                if ($description === null) {
 
-            $newEnchantment->enchantment_name = $enchantment['enchantment_name'];
-            $newEnchantment->tag_id = $enchantment['tag_id'] ?? null;
+                    continue;
 
-            $newEnchantment->save();
+                };
+
+                $existingEnchantment = Enchantment::where('enchantment_description', $description)->first();
+
+                if ($existingEnchantment) {
+
+                    continue; 
+                    
+                }
+
+                $newEnchantment = new Enchantment();
+                
+                $newEnchantment->enchantment_name = ucfirst($enchantment); // Capital name
+
+                $newEnchantment->enchantment_description = $description;
+
+                $tagIds = [
+                    'deadly' => 11,
+                    'fiery' => 1,
+                    'golden' => 19,
+                    'heavy' => 9,
+                    'icy' => 4,
+                    'obsidian' => 16,
+                    'restorative' => 6,
+                    'shielded' => 8,
+                    'shiny' => null,
+                    'toxic' => 7,
+                    'turbo' => 5,
+                ];
+
+                $newEnchantment->tag_id = $tagIds[$enchantment] ?? null;
+
+                $newEnchantment->save();
+            }
         }
     }
 }
