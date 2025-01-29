@@ -16,26 +16,106 @@ class TiersTableSeeder extends Seeder
 
         $tiers = [
 
-            ['tier_label' => 'bronze', 'tier_size' => 'small'],
-            ['tier_label' => 'silver', 'tier_size' => 'small'],
-            ['tier_label' => 'gold', 'tier_size' => 'small'],
-            ['tier_label' => 'diamond', 'tier_size' => 'small'],
-            ['tier_label' => 'legendary', 'tier_size' => 'small'],
-            ['tier_label' => 'bronze', 'tier_size' => 'medium'],
-            ['tier_label' => 'silver', 'tier_size' => 'medium'],
-            ['tier_label' => 'gold', 'tier_size' => 'medium'],
-            ['tier_label' => 'diamond', 'tier_size' => 'medium'],
-            ['tier_label' => 'legendary', 'tier_size' => 'medium'],
-            ['tier_label' => 'bronze', 'tier_size' => 'large'],
-            ['tier_label' => 'silver', 'tier_size' => 'large'],
-            ['tier_label' => 'gold', 'tier_size' => 'large'],
-            ['tier_label' => 'diamond', 'tier_size' => 'large'],
-            ['tier_label' => 'legendary', 'tier_size' => 'large'],
-            ['tier_label' => 'bronze', 'tier_size' => null],
-            ['tier_label' => 'silver', 'tier_size' => null],
-            ['tier_label' => 'gold', 'tier_size' => null],
-            ['tier_label' => 'diamond', 'tier_size' => null],
-            ['tier_label' => 'legendary', 'tier_size' => null],
+            [
+                'tier_label' => 'bronze',
+                'tier_frame' => null,
+                'tier_size' => 'small',
+            ],
+            [
+                'tier_label' => 'silver',
+                'tier_frame' => null,
+                'tier_size' => 'small'
+            ],
+            [
+                'tier_label' => 'gold',
+                'tier_frame' => null,
+                'tier_size' => 'small'
+            ],
+            [
+                'tier_label' => 'diamond',
+                'tier_frame' => null,
+                'tier_size' => 'small'
+            ],
+            [
+                'tier_label' => 'legendary',
+                'tier_frame' => null,
+                'tier_size' => 'small'
+            ],
+            [
+                'tier_label' => 'bronze',
+                'tier_frame' => null,
+                'tier_size' => 'medium'
+            ],
+            [
+                'tier_label' => 'silver',
+                'tier_frame' => null,
+                'tier_size' => 'medium'
+            ],
+            [
+                'tier_label' => 'gold',
+                'tier_frame' => null,
+                'tier_size' => 'medium'
+            ],
+            [
+                'tier_label' => 'diamond',
+                'tier_frame' => null,
+                'tier_size' => 'medium'
+            ],
+            [
+                'tier_label' => 'legendary',
+                'tier_frame' => null,
+                'tier_size' => 'medium'
+            ],
+            [
+                'tier_label' => 'bronze',
+                'tier_frame' => null,
+                'tier_size' => 'large'
+            ],
+            [
+                'tier_label' => 'silver',
+                'tier_frame' => null,
+                'tier_size' => 'large'
+            ],
+            [
+                'tier_label' => 'gold',
+                'tier_frame' => null,
+                'tier_size' => 'large'
+            ],
+            [
+                'tier_label' => 'diamond',
+                'tier_frame' => null,
+                'tier_size' => 'large'
+            ],
+            [
+                'tier_label' => 'legendary',
+                'tier_frame' => null,
+                'tier_size' => 'large'
+            ],
+            [
+                'tier_label' => 'bronze',
+                'tier_frame' => null,
+                'tier_size' => null
+            ],
+            [
+                'tier_label' => 'silver',
+                'tier_frame' => null,
+                'tier_size' => null
+            ],
+            [
+                'tier_label' => 'gold',
+                'tier_frame' => null,
+                'tier_size' => null
+            ],
+            [
+                'tier_label' => 'diamond',
+                'tier_frame' => null,
+                'tier_size' => null
+            ],
+            [
+                'tier_label' => 'legendary',
+                'tier_frame' => null,
+                'tier_size' => null
+            ],
 
         ];
 
@@ -44,7 +124,8 @@ class TiersTableSeeder extends Seeder
             $newTier = new Tier();
 
             $newTier->tier_label = $tier['tier_label'];
-            $newTier->tier_size = $tier['tier_size'];
+            $newTier->tier_frame = $tier['tier_frame'] ?? null;
+            $newTier->tier_size = $tier['tier_size'] ?? null;
 
             $newTier->save();
         }
