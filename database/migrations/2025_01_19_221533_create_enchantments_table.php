@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('tag_id')->nullable()->constrained('tags')->onDelete('set null')->onUpdate('cascade');
 
-            $table->string('enchantment_name', 255)->unique();
+            $table->string('enchantment_name', 255);
             $table->string('enchantment_description', 255)->unique();
 
             $table->timestamps();
