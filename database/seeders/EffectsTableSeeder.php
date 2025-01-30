@@ -16,22 +16,19 @@ class EffectsTableSeeder extends Seeder
 
         foreach ($items as $item) {
 
-            if (!empty($item['effect_1'])) {
+            if (!empty($item['effects'])) {
 
-                Effect::firstOrCreate([
+                foreach ($item['effects'] as $effect) {
 
-                    'effect_description' => $item['effect_1'],
+                    if (!empty($effect['effect_description'])) {
 
-                ]);
-            }
+                        Effect::firstOrCreate([
 
-            if (!empty($item['effect_2'])) {
+                            'effect_description' => $effect['effect_description'],
 
-                Effect::firstOrCreate([
-
-                    'effect_description' => $item['effect_2'],
-
-                ]);
+                        ]);
+                    }
+                }
             }
         }
     }

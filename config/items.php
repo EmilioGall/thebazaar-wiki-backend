@@ -14,33 +14,38 @@ return [
       'hero_id' => 5, // Pygmalien
       'min_tier_id' => 3, // Gold - Small
 
-      'tags_id' => [ 8, 26, 35], // ['shield', 'economy', 'tool']
+      'tiers_id' => [3, 4], // [Gold, Diamond] - Small
 
-      'effect_1' => '{ Shield } equal to { n }x the value of the adjacent items.',
-      'value1_bronze' => null,
-      'value1_silver' => null,
-      'value1_gold' => 1,
-      'value1_diamond' => 2,
-      'value1_legendary' => null,
+      'tags_id' => [8, 26, 35], // ['shield', 'economy', 'tool']
 
-      'effect_2' => null,
-      'value2_bronze' => null,
-      'value2_silver' => null,
-      'value2_gold' => null,
-      'value2_diamond' => null,
-      'value2_legendary' => null,
+      'effects' => [
 
-      'deadly' => '+50% { Crit } Chance',
-      'fiery' => '{ Burn } 3.',
-      'golden' => 'Adjacent items have +50% { Value }.',
-      'heavy' => '{ Slow } 1 item for 1 second(s).',
-      'icy' => '{ Freeze } 1 item for 1 second(s).',
-      'obsidian' => null,
-      'restorative' => "{ Heal } equal to the { Value } of adjacent items.",
-      'shielded' => "This has double { Shield }.",
-      'shiny' => 'This has +1 { Multicast }.',
-      'toxic' => '{ Poison } 2.',
-      'turbo' => '{ Haste } 1 item for 1 second(s).',
+         [
+            'effect_description' => '{ Shield } equal to { n }x the value of the adjacent items.',
+            'value_bronze' => null,
+            'value_silver' => null,
+            'value_gold' => 1,
+            'value_diamond' => 2,
+            'value_legendary' => null,
+         ],
+
+      ],
+
+      'enchantments' => [
+
+         'deadly' => '+50% { Crit } Chance',
+         'fiery' => '{ Burn } 3.',
+         'golden' => 'Adjacent items have +50% { Value }.',
+         'heavy' => '{ Slow } 1 item for 1 second(s).',
+         'icy' => '{ Freeze } 1 item for 1 second(s).',
+         'obsidian' => null,
+         'restorative' => "{ Heal } equal to the { Value } of adjacent items.",
+         'shielded' => "This has double { Shield }.",
+         'shiny' => 'This has +1 { Multicast }.',
+         'toxic' => '{ Poison } 2.',
+         'turbo' => '{ Haste } 1 item for 1 second(s).',
+      ]
+
    ],
 
    // Agility Boots
@@ -55,33 +60,47 @@ return [
       'hero_id' => 1, // Common
       'min_tier_id' => 1, // Bronze - Small
 
+      'tiers_id' => [1, 2, 3, 4], // [Bronze, Silver, Gold, Diamond] - Small
+
       'tags_id' => [11], // ['crit']
 
-      'effect_1' => 'Adjacent items have +{ n }% { Crit } chance.',
-      'value1_bronze' => 3,
-      'value1_silver' => 6,
-      'value1_gold' => 9,
-      'value1_diamond' => 12,
-      'value1_legendary' => null,
+      'effects' => [
 
-      'effect_2' => 'When you sell this, your items gain +{ n }% { Crit } chance.',
-      'value2_bronze' => 1,
-      'value2_silver' => 2,
-      'value2_gold' => 3,
-      'value2_diamond' => 4,
-      'value2_legendary' => null,
+         [
+            'effect_description' => 'Adjacent items have +{ n }% { Crit } chance.',
+            'value_bronze' => 3,
+            'value_silver' => 6,
+            'value_gold' => 9,
+            'value_diamond' => 12,
+            'value_legendary' => null,
+         ],
+         [
+            'effect_description' => 'When you sell this, your items gain +{ n }% { Crit } chance.',
+            'value_bronze' => 1,
+            'value_silver' => 2,
+            'value_gold' => 3,
+            'value_diamond' => 4,
+            'value_legendary' => null,
+         ],
 
-      'deadly' => null,
-      'fiery' => null,
-      'golden' => null,
-      'heavy' => null,
-      'icy' => null,
-      'obsidian' => null,
-      'restorative' => null,
-      'shielded' => null,
-      'shiny' => 'This gives double + { Crit } Chance.',
-      'toxic' => null,
-      'turbo' => null,
+      ],
+
+      'enchantments' => [
+
+         'deadly' => null,
+         'fiery' => null,
+         'golden' => null,
+         'heavy' => null,
+         'icy' => null,
+         'obsidian' => null,
+         'restorative' => null,
+         'shielded' => null,
+         'shiny' => 'This gives double + { Crit } Chance.',
+         'toxic' => null,
+         'turbo' => null,
+
+      ]
+
    ],
 
    // Alpha Ray
@@ -96,33 +115,47 @@ return [
       'hero_id' => 2, // Dooley
       'min_tier_id' => 1, // Bronze - Small
 
+      'tiers_id' => [1, 2, 3, 4], // [Bronze, Silver, Gold, Diamond] - Small
+
       'tags_id' => [3, 33, 39], // ['damage', 'ray', 'weapon']
 
-      'effect_1' => 'Deal { n } { Damage }.',
-      'value1_bronze' => 5,
-      'value1_silver' => 10,
-      'value1_gold' => 20,
-      'value1_diamond' => 40,
-      'value1_legendary' => null,
+      'effects' => [
 
-      'effect_2' => 'When you use the Core or another Ray, your Weapons gain { n } { Damage } for the fight.',
-      'value2_bronze' => 3,
-      'value2_silver' => 6,
-      'value2_gold' => 9,
-      'value2_diamond' => 12,
-      'value2_legendary' => null,
+         [
+            'effect_description' => 'Deal { n } { Damage }.',
+            'value_bronze' => 5,
+            'value_silver' => 10,
+            'value_gold' => 20,
+            'value_diamond' => 40,
+            'value_legendary' => null,
+         ],
+         [
+            'effect_description' => 'When you use the Core or another Ray, your Weapons gain { n } { Damage } for the fight.',
+            'value_bronze' => 3,
+            'value_silver' => 6,
+            'value_gold' => 9,
+            'value_diamond' => 12,
+            'value_legendary' => null,
+         ],
 
-      'deadly' => '+50% { Crit } Chance',
-      'fiery' => '{ Burn } 4.',
-      'golden' => null,
-      'heavy' => '{ Slow } 1 item for 1 second(s).',
-      'icy' => '{ Freeze } 1 item for 1 second(s).',
-      'obsidian' => 'This has { Lifesteal }.',
-      'restorative' => "{ Heal } equal to this item's { Damage }.",
-      'shielded' => "{ Shield } equal to this item's { Damage }.",
-      'shiny' => 'This has +1 { Multicast }.',
-      'toxic' => '{ Poison } 2.',
-      'turbo' => '{ Haste } 1 item for 1 second(s).',
+      ],
+
+      'enchantments' => [
+
+         'deadly' => '+50% { Crit } Chance',
+         'fiery' => '{ Burn } 4.',
+         'golden' => null,
+         'heavy' => '{ Slow } 1 item for 1 second(s).',
+         'icy' => '{ Freeze } 1 item for 1 second(s).',
+         'obsidian' => 'This has { Lifesteal }.',
+         'restorative' => "{ Heal } equal to this item's { Damage }.",
+         'shielded' => "{ Shield } equal to this item's { Damage }.",
+         'shiny' => 'This has +1 { Multicast }.',
+         'toxic' => '{ Poison } 2.',
+         'turbo' => '{ Haste } 1 item for 1 second(s).',
+
+      ],
+
    ],
 
    // Amber
@@ -137,33 +170,47 @@ return [
       'hero_id' => 4, // Mak
       'min_tier_id' => 2, // Silver - Small
 
+      'tiers_id' => [2, 3, 4], // [Silver, Gold, Diamond] - Small
+
       'tags_id' => [9], // ['slow']
 
-      'effect_1' => '{ Slow } { n } items for 3 second(s).',
-      'value1_bronze' => null,
-      'value1_silver' => 1,
-      'value1_gold' => 2,
-      'value1_diamond' => 3,
-      'value1_legendary' => null,
+      'effects' => [
 
-      'effect_2' => 'Your other { Slow } items have +1 { Slow }.',
-      'value2_bronze' => null,
-      'value2_silver' => null,
-      'value2_gold' => null,
-      'value2_diamond' => null,
-      'value2_legendary' => null,
+         [
+            'effect_description' => '{ Slow } { n } items for 3 second(s).',
+            'value_bronze' => null,
+            'value_silver' => 1,
+            'value_gold' => 2,
+            'value_diamond' => 3,
+            'value_legendary' => null,
+         ],
+         [
+            'effect_description' => 'Your other { Slow } items have +1 { Slow }.',
+            'value_bronze' => null,
+            'value_silver' => null,
+            'value_gold' => null,
+            'value_diamond' => null,
+            'value_legendary' => null,
+         ],
 
-      'deadly' => null,
-      'fiery' => '{ Burn } 4.',
-      'golden' => null,
-      'heavy' => 'This has double { Slow } duration.',
-      'icy' => '{ Freeze } 1 item for 1 second(s).',
-      'obsidian' => null,
-      'restorative' => '{ Heal } 40.',
-      'shielded' => '{ Shield } 25.',
-      'shiny' => 'This has +1 { Multicast }.',
-      'toxic' => '{ Poison } 2.',
-      'turbo' => '{ Haste } 1 item for 1 second(s).',
+      ],
+
+      'enchantments' => [
+
+         'deadly' => null,
+         'fiery' => '{ Burn } 4.',
+         'golden' => null,
+         'heavy' => 'This has double { Slow } duration.',
+         'icy' => '{ Freeze } 1 item for 1 second(s).',
+         'obsidian' => null,
+         'restorative' => '{ Heal } 40.',
+         'shielded' => '{ Shield } 25.',
+         'shiny' => 'This has +1 { Multicast }.',
+         'toxic' => '{ Poison } 2.',
+         'turbo' => '{ Haste } 1 item for 1 second(s).',
+
+      ],
+
    ],
 
    // Ambergris 
@@ -178,33 +225,47 @@ return [
       'hero_id' => 7, // Vanessa
       'min_tier_id' => 1, // Bronze - Small
 
+      'tiers_id' => [1, 2, 3, 4], // [Bronze, Silver, Gold, Diamond] - Small
+
       'tags_id' => [22, 26, 6, 19], // ['aquatic', 'economy', 'heal', 'value']
 
-      'effect_1' => "{ Heal } equal to { n }x this item's { Value }.",
-      'value1_bronze' => 1,
-      'value1_silver' => 2,
-      'value1_gold' => 3,
-      'value1_diamond' => 4,
-      'value1_legendary' => null,
+      'effects' => [
 
-      'effect_2' => 'When you buy another Aquatic item, this gains { n } { Value }.',
-      'value2_bronze' => 1,
-      'value2_silver' => 2,
-      'value2_gold' => 3,
-      'value2_diamond' => 4,
-      'value2_legendary' => null,
+         [
+            'effect_description' => "{ Heal } equal to { n }x this item's { Value }.",
+            'value_bronze' => 1,
+            'value_silver' => 2,
+            'value_gold' => 3,
+            'value_diamond' => 4,
+            'value_legendary' => null,
+         ],
+         [
+            'effect_description' => 'When you buy another Aquatic item, this gains { n } { Value }.',
+            'value_bronze' => 1,
+            'value_silver' => 2,
+            'value_gold' => 3,
+            'value_diamond' => 4,
+            'value_legendary' => null,
+         ],
 
-      'deadly' => '+50% { Crit } Chance',
-      'fiery' =>  "{ Burn } equal to this item's { Value }.",
-      'golden' => 'Double { Value }',
-      'heavy' => '{ Slow } 1 item for 1 second(s).',
-      'icy' => '{ Freeze } 1 item for 1 second(s).',
-      'obsidian' => null,
-      'restorative' => 'This has double { Heal }.',
-      'shielded' => "{ Shield } equal to this item's { Heal }.",
-      'shiny' => 'This has +1 Multicast.',
-      'toxic' => "{ Poison } equal to this item's { Value }.",
-      'turbo' => '{ Haste } 1 item for 1 second(s).',
+      ],
+
+      'enchantments' => [
+
+         'deadly' => '+50% { Crit } Chance',
+         'fiery' =>  "{ Burn } equal to this item's { Value }.",
+         'golden' => 'Double { Value }',
+         'heavy' => '{ Slow } 1 item for 1 second(s).',
+         'icy' => '{ Freeze } 1 item for 1 second(s).',
+         'obsidian' => null,
+         'restorative' => 'This has double { Heal }.',
+         'shielded' => "{ Shield } equal to this item's { Heal }.",
+         'shiny' => 'This has +1 Multicast.',
+         'toxic' => "{ Poison } equal to this item's { Value }.",
+         'turbo' => '{ Haste } 1 item for 1 second(s).',
+
+      ],
+
    ],
 
    // Anchor 
@@ -219,33 +280,47 @@ return [
       'hero_id' => 7, // Vanessa
       'min_tier_id' => 8, // Gold - Medium
 
+      'tiers_id' => [8, 9], // [Gold, Diamond] - Medium
+
       'tags_id' => [22, 3, 5, 39], // ['aquatic', 'damage', 'haste', 'weapon']
 
-      'effect_1' => "Deal { Damage } equal to { n }% of your enemy's Max Health.",
-      'value1_bronze' => null,
-      'value1_silver' => null,
-      'value1_gold' => 20,
-      'value1_diamond' => 30,
-      'value1_legendary' => null,
+      'effects' => [
 
-      'effect_2' => "When you use an adjacent item, this gains { Haste } for { n } second(s).",
-      'value2_bronze' => null,
-      'value2_silver' => null,
-      'value2_gold' => 2,
-      'value2_diamond' => 4,
-      'value2_legendary' => null,
+         [
+            'effect_description' => "Deal { Damage } equal to { n }% of your enemy's Max Health.",
+            'value_bronze' => null,
+            'value_silver' => null,
+            'value_gold' => 20,
+            'value_diamond' => 30,
+            'value_legendary' => null,
+         ],
+         [
+            'effect_description' => "When you use an adjacent item, this gains { Haste } for { n } second(s).",
+            'value_bronze' => null,
+            'value_silver' => null,
+            'value_gold' => 2,
+            'value_diamond' => 4,
+            'value_legendary' => null,
+         ],
 
-      'deadly' => '+50% { Crit } Chance',
-      'fiery' =>  "{ Burn } 18",
-      'golden' => null,
-      'heavy' => '{ Slow } 2 item for 4 second(s).',
-      'icy' => '{ Freeze } 1 item for 4 second(s).',
-      'obsidian' => 'This has { Lifesteal }.',
-      'restorative' => "{ Heal } equal to this item's { Damage }.",
-      'shielded' => "{ Shield } equal to this item's { Damage }.",
-      'shiny' => 'This has +1 Multicast.',
-      'toxic' => "{ Poison } 12",
-      'turbo' => '{ Haste } 1 item for 2 second(s).',
+      ],
+
+      'enchantments' => [
+
+         'deadly' => '+50% { Crit } Chance',
+         'fiery' =>  "{ Burn } 18",
+         'golden' => null,
+         'heavy' => '{ Slow } 2 item for 4 second(s).',
+         'icy' => '{ Freeze } 1 item for 4 second(s).',
+         'obsidian' => 'This has { Lifesteal }.',
+         'restorative' => "{ Heal } equal to this item's { Damage }.",
+         'shielded' => "{ Shield } equal to this item's { Damage }.",
+         'shiny' => 'This has +1 Multicast.',
+         'toxic' => "{ Poison } 12",
+         'turbo' => '{ Haste } 1 item for 2 second(s).',
+
+      ],
+
    ],
 
    // Angry Balloon Bot 
@@ -260,33 +335,47 @@ return [
       'hero_id' => 2, // Dooley
       'min_tier_id' => 7, // Silver - Medium
 
+      'tiers_id' => [7, 8, 9], // [Silver, Gold, Diamond] - Medium
+
       'tags_id' => [3, 28, 49, 39], // ['damage', 'friend', 'shieldReference', 'weapon']
 
-      'effect_1' => "Deal 10 { Damage }.",
-      'value1_bronze' => null,
-      'value1_silver' => null,
-      'value1_gold' => null,
-      'value1_diamond' => null,
-      'value1_legendary' => null,
+      'effects' => [
 
-      'effect_2' => "When you lose { Shield }, this gains damage equal to { n }% of the { Shield } lost.",
-      'value2_bronze' => null,
-      'value2_silver' => 10,
-      'value2_gold' => 20,
-      'value2_diamond' => 40,
-      'value2_legendary' => null,
+         [
+            'effect_description' => "Deal 10 { Damage }.",
+            'value_bronze' => null,
+            'value_silver' => null,
+            'value_gold' => null,
+            'value_diamond' => null,
+            'value_legendary' => null,
+         ],
+         [
+            'effect_description' => "When you lose { Shield }, this gains damage equal to { n }% of the { Shield } lost.",
+            'value_bronze' => null,
+            'value_silver' => 10,
+            'value_gold' => 20,
+            'value_diamond' => 40,
+            'value_legendary' => null,
+         ],
 
-      'deadly' => '+50% { Crit } Chance',
-      'fiery' =>  "{ Burn } 6",
-      'golden' => null,
-      'heavy' => '{ Slow } 2 item for 1 second(s).',
-      'icy' => '{ Freeze } 1 item for 1 second(s).',
-      'obsidian' => 'This has { Lifesteal }.',
-      'restorative' => "{ Heal } equal to this item's { Damage }.",
-      'shielded' => "{ Shield } equal to this item's { Damage }.",
-      'shiny' => 'This has +1 Multicast.',
-      'toxic' => "{ Poison } 4",
-      'turbo' => '{ Haste } 2 item for 1 second(s).',
+      ],
+
+      'enchantments' => [
+
+         'deadly' => '+50% { Crit } Chance',
+         'fiery' =>  "{ Burn } 6",
+         'golden' => null,
+         'heavy' => '{ Slow } 2 item for 1 second(s).',
+         'icy' => '{ Freeze } 1 item for 1 second(s).',
+         'obsidian' => 'This has { Lifesteal }.',
+         'restorative' => "{ Heal } equal to this item's { Damage }.",
+         'shielded' => "{ Shield } equal to this item's { Damage }.",
+         'shiny' => 'This has +1 Multicast.',
+         'toxic' => "{ Poison } 4",
+         'turbo' => '{ Haste } 2 item for 1 second(s).',
+
+      ],
+
    ],
 
    // Antimatter Chamber 
@@ -301,33 +390,39 @@ return [
       'hero_id' => 2, // Dooley
       'min_tier_id' => 14, // Diamond - Large
 
+      'tiers_id' => [14], // [Diamond] - Large
+
       'tags_id' => [34], // ['tech',]
 
-      'effect_1' => "Destroy this and { n } small enemy items for the fight.",
-      'value1_bronze' => null,
-      'value1_silver' => null,
-      'value1_gold' => null,
-      'value1_diamond' => 3,
-      'value1_legendary' => null,
+      'effects' => [
 
-      'effect_2' => null,
-      'value2_bronze' => null,
-      'value2_silver' => null,
-      'value2_gold' => null,
-      'value2_diamond' => null,
-      'value2_legendary' => null,
+         [
+            'effect_description' => "Destroy this and { n } small enemy items for the fight.",
+            'value_bronze' => null,
+            'value_silver' => null,
+            'value_gold' => null,
+            'value_diamond' => 3,
+            'value_legendary' => null,
+         ],
 
-      'deadly' => null,
-      'fiery' =>  "{ Burn } 22",
-      'golden' => null,
-      'heavy' => '{ Slow } 3 item for 3 second(s).',
-      'icy' => '{ Freeze } 1 item for 4 second(s).',
-      'obsidian' => null,
-      'restorative' => "{ Heal } 225.",
-      'shielded' => "{ Shield } 150.",
-      'shiny' => 'This has +1 Multicast.',
-      'toxic' => "{ Poison } 15",
-      'turbo' => '{ Haste } 3 item for 3 second(s).',
+      ],
+
+      'enchantments' => [
+
+         'deadly' => null,
+         'fiery' =>  "{ Burn } 22",
+         'golden' => null,
+         'heavy' => '{ Slow } 3 item for 3 second(s).',
+         'icy' => '{ Freeze } 1 item for 4 second(s).',
+         'obsidian' => null,
+         'restorative' => "{ Heal } 225.",
+         'shielded' => "{ Shield } 150.",
+         'shiny' => 'This has +1 Multicast.',
+         'toxic' => "{ Poison } 15",
+         'turbo' => '{ Haste } 3 item for 3 second(s).',
+
+      ],
+
    ],
 
    // Apropos Chapeau 
@@ -342,33 +437,47 @@ return [
       'hero_id' => 5, // Pygmalien
       'min_tier_id' => 7, // Silver - Medium
 
+      'tiers_id' => [7, 8, 9], // [Silver, Gold, Diamond] - Medium
+
       'tags_id' => [43, 8], //['damageReference', 'shield']
 
-      'effect_1' => "{ Shield } { n }.",
-      'value1_bronze' => null,
-      'value1_silver' => 25,
-      'value1_gold' => 50,
-      'value1_diamond' => 100,
-      'value1_legendary' => null,
+      'effects' => [
 
-      'effect_2' => "Adjacent weapons gain { n } { Damage } for the fight.",
-      'value2_bronze' => null,
-      'value2_silver' => 10,
-      'value2_gold' => 20,
-      'value2_diamond' => 30,
-      'value2_legendary' => null,
+         [
+            'effect_description' => "{ Shield } { n }.",
+            'value_bronze' => null,
+            'value_silver' => 25,
+            'value_gold' => 50,
+            'value_diamond' => 100,
+            'value_legendary' => null,
+         ],
+         [
+            'effect_description' => "Adjacent weapons gain { n } { Damage } for the fight.",
+            'value_bronze' => null,
+            'value_silver' => 10,
+            'value_gold' => 20,
+            'value_diamond' => 30,
+            'value_legendary' => null,
+         ],
 
-      'deadly' => '+50% { Crit } Chance',
-      'fiery' =>  "{ Burn } 7",
-      'golden' => null,
-      'heavy' => '{ Slow } 2 item for 2 second(s).',
-      'icy' => '{ Freeze } 1 item for 2 second(s).',
-      'obsidian' => null,
-      'restorative' => "{ Heal } equal to this item's { Shield }.",
-      'shielded' => "This has double { Shield }.",
-      'shiny' => 'This has +1 Multicast.',
-      'toxic' => "{ Poison } 5",
-      'turbo' => '{ Haste } 2 item for 2 second(s).',
+      ],
+
+      'enchantments' => [
+
+         'deadly' => '+50% { Crit } Chance',
+         'fiery' =>  "{ Burn } 7",
+         'golden' => null,
+         'heavy' => '{ Slow } 2 item for 2 second(s).',
+         'icy' => '{ Freeze } 1 item for 2 second(s).',
+         'obsidian' => null,
+         'restorative' => "{ Heal } equal to this item's { Shield }.",
+         'shielded' => "This has double { Shield }.",
+         'shiny' => 'This has +1 Multicast.',
+         'toxic' => "{ Poison } 5",
+         'turbo' => '{ Haste } 2 item for 2 second(s).',
+
+      ],
+
    ],
 
    // Arbalest 
@@ -383,32 +492,46 @@ return [
       'hero_id' => 7, // Vanessa
       'min_tier_id' => 7, // Silver - Medium
 
+      'tiers_id' => [7, 8, 9], // [Silver, Gold, Diamond] - Medium
+
       'tags_id' => [3, 45, 39], // ['damage', 'hasteRefference', 'weapon']
 
-      'effect_1' => 'Deal { n } { Damage }.',
-      'value1_bronze' => null,
-      'value1_silver' => 50,
-      'value1_gold' => 100,
-      'value1_diamond' => 200,
-      'value1_legendary' => null,
+      'effects' => [
 
-      'effect_2' => "When you { Haste }, this gains { n } { Damage } for the fight.",
-      'value2_bronze' => null,
-      'value2_silver' => 25,
-      'value2_gold' => 50,
-      'value2_diamond' => 75,
-      'value2_legendary' => null,
+         [
+            'effect_description' => 'Deal { n } { Damage }.',
+            'value_bronze' => null,
+            'value_silver' => 50,
+            'value_gold' => 100,
+            'value_diamond' => 200,
+            'value_legendary' => null,
+         ],
+         [
+            'effect_description' => "When you { Haste }, this gains { n } { Damage } for the fight.",
+            'value_bronze' => null,
+            'value_silver' => 25,
+            'value_gold' => 50,
+            'value_diamond' => 75,
+            'value_legendary' => null,
+         ],
 
-      'deadly' => '+50% { Crit } Chance',
-      'fiery' =>  "{ Burn } 12. When you Haste, this gains +3 Burn for the fight.",
-      'golden' => null,
-      'heavy' => '{ Slow } 2 item for 3 second(s).',
-      'icy' => '{ Freeze } 1 item for 3 second(s).',
-      'obsidian' => 'This has { Lifesteal }.',
-      'restorative' => "{ Heal } equal to this item's { Damage }.",
-      'shielded' => "{ Shield } equal to this item's { Damage }.",
-      'shiny' => 'This has +1 Multicast.',
-      'toxic' => "{ Poison } 8. When you Haste, this gains +2 { Poison } for the fight.",
-      'turbo' => '{ Haste } 2 item for 3 second(s).',
+      ],
+
+      'enchantments' => [
+
+         'deadly' => '+50% { Crit } Chance',
+         'fiery' =>  "{ Burn } 12. When you Haste, this gains +3 Burn for the fight.",
+         'golden' => null,
+         'heavy' => '{ Slow } 2 item for 3 second(s).',
+         'icy' => '{ Freeze } 1 item for 3 second(s).',
+         'obsidian' => 'This has { Lifesteal }.',
+         'restorative' => "{ Heal } equal to this item's { Damage }.",
+         'shielded' => "{ Shield } equal to this item's { Damage }.",
+         'shiny' => 'This has +1 Multicast.',
+         'toxic' => "{ Poison } 8. When you Haste, this gains +2 { Poison } for the fight.",
+         'turbo' => '{ Haste } 2 item for 3 second(s).',
+
+      ],
+
    ],
 ];

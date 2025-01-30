@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Enchantment;
+use App\Models\Tag; // Assicurati di importare il modello Tag
 
 class EnchantmentsTableSeeder extends Seeder
 {
@@ -14,49 +14,38 @@ class EnchantmentsTableSeeder extends Seeder
     public function run(): void
     {
 
-        $itemEnchantments = config('enchantments');
+        $items = config('items');
 
-        foreach ($itemEnchantments as $item) {
+        foreach ($items as $item) {
 
-            foreach ($item as $enchantment => $description) {
+            if (isset($item['enchantments'])) {
 
-                if ($description === null) {
+                foreach ($item['enchantments'] as $enchantment => $description) {
 
-                    continue;
+                    if ($description === null) {
 
-                };
+                        continue;
+                    }
 
-                $existingEnchantment = Enchantment::where('enchantment_description', $description)->first();
+                    $existingEnchantment = Enchantment::where('enchantment_description', $description)->first();
 
-                if ($existingEnchantment) {
+                    if ($existingEnchantment) {
 
-                    continue; 
-                    
+                        continue;
+                    }
+
+                    $tag = Tag::where('tag_name', $enchantment)->first();
+
+                    $newEnchantment = new Enchantment();
+
+                    $newEnchantment->enchantment_name = ucfirst($enchantment); // Capital first letter
+
+                    $newEnchantment->enchantment_description = $description;
+
+                    $newEnchantment->tag_id = $tag ? $tag->id : null;
+
+                    $newEnchantment->save();
                 }
-
-                $newEnchantment = new Enchantment();
-                
-                $newEnchantment->enchantment_name = ucfirst($enchantment); // Capital name
-
-                $newEnchantment->enchantment_description = $description;
-
-                $tagIds = [
-                    'deadly' => 11,
-                    'fiery' => 1,
-                    'golden' => 19,
-                    'heavy' => 9,
-                    'icy' => 4,
-                    'obsidian' => 16,
-                    'restorative' => 6,
-                    'shielded' => 8,
-                    'shiny' => null,
-                    'toxic' => 7,
-                    'turbo' => 5,
-                ];
-
-                $newEnchantment->tag_id = $tagIds[$enchantment] ?? null;
-
-                $newEnchantment->save();
             }
         }
     }
