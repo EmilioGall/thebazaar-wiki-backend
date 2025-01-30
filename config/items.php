@@ -96,7 +96,7 @@ return [
       'hero_id' => 2, // Dooley
       'min_tier_id' => 1, // Bronze - Small
 
-      'tag_id' => [3, 33, 39], // ['damage', 'ray', 'weapon']
+      'tags_id' => [3, 33, 39], // ['damage', 'ray', 'weapon']
 
       'effect_1' => 'Deal { n } { Damage }.',
       'value1_bronze' => 5,
@@ -383,7 +383,7 @@ return [
       'hero_id' => 7, // Vanessa
       'min_tier_id' => 7, // Silver - Medium
 
-      'tags' => [3, 45, 39], // ['damage', 'hasteRefference', 'weapon']
+      'tags_id' => [3, 45, 39], // ['damage', 'hasteRefference', 'weapon']
 
       'effect_1' => 'Deal { n } { Damage }.',
       'value1_bronze' => null,
