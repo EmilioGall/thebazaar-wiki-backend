@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             EffetsTableSeeder::class,
             EnchantmentItemTableSeeder::class,
             ItemTagTableSeeder::class,
-                      
+            ItemTierTableSeeder::class,          
 
         ]);
 
