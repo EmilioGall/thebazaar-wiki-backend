@@ -4,17 +4,17 @@ return [
 
    // Abacus enchantments
    [
-      'deadly' => null,
-      'fiery' => null,
+      'deadly' => '+50% { Crit } Chance',
+      'fiery' => '{ Burn } 3.',
       'golden' => 'Adjacent items have +50% { Value }.',
       'heavy' => '{ Slow } 1 item for 1 second(s).',
-      'icy' => null,
+      'icy' => '{ Freeze } 1 item for 1 second(s).',
       'obsidian' => null,
-      'restorative' => null,
-      'shielded' => null,
-      'shiny' => null,
-      'toxic' => null,
-      'turbo' => null,
+      'restorative' => "{ Heal } equal to the { Value } of adjacent items.",
+      'shielded' => "This has double { Shield }.",
+      'shiny' => 'This has +1 { Multicast }.',
+      'toxic' => '{ Poison } 2.',
+      'turbo' => '{ Haste } 1 item for 1 second(s).',
    ],
 
    // Agility Boots enchantments
