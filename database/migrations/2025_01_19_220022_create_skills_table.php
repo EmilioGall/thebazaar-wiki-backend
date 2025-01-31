@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('skills', function (Blueprint $table) {
 
             $table->id();
-            $table->foreignId('hero_id')->constrained()->onDelete('cascade')->onUpdate('cascade')->nullable();
+            $table->foreignId('hero_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('min_tier_id')->nullable()->constrained('tiers')->onUpdate('cascade')->onDelete('set null');
 
             $table->string('skill_name')->unique();

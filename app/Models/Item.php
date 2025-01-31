@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Item extends Model
 {
@@ -18,9 +19,18 @@ class Item extends Model
         'item_state',
         'item_cooldown',
         'item_max_ammo',
-        'item_multicast'
+        'item_multicast',
+        'slug',
 
     ];
+
+    public function setItemNameAttribute($value)
+    {
+
+        $this->attributes['item_name'] = $value;
+
+        $this->attributes['slug'] = Str::slug($value);
+    }
 
     ///// Relations /////
 
