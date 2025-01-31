@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Encounter extends Model
 {
@@ -12,9 +13,18 @@ class Encounter extends Model
     protected $fillable = [
 
         'encounter_name',
-        'encounter_img'
+        'encounter_slug',
+        'encounter_img',
         
     ];
+
+    public function setEncounterNameAttribute($value)
+    {
+
+        $this->attributes['encounter_name'] = $value;
+
+        $this->attributes['encounter_slug'] = Str::slug($value);
+    }
 
     ///// Relations /////
 

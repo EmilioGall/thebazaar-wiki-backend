@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Skill extends Model
 {
@@ -14,9 +15,18 @@ class Skill extends Model
         'hero_id',
         'min_tier_id',
         'skill_name',
+        'skill_slug',
         'skill_img'
 
     ];
+
+    public function setSkillNameAttribute($value)
+    {
+
+        $this->attributes['skill_name'] = $value;
+
+        $this->attributes['skill_slug'] = Str::slug($value);
+    }
 
     ///// Relations /////
 

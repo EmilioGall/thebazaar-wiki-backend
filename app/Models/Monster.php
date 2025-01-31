@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Monster extends Model
 {
@@ -13,9 +14,18 @@ class Monster extends Model
 
         'tier_id',
         'monster_name',
+        'monster_slug',
         'monster_img'
 
     ];
+
+    public function setMonsterNameAttribute($value)
+    {
+
+        $this->attributes['monster_name'] = $value;
+
+        $this->attributes['monster_slug'] = Str::slug($value);
+    }
 
     ///// Relations /////
 

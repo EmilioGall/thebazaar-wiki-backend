@@ -15,12 +15,12 @@ class Item extends Model
         'hero_id',
         'min_tier_id',
         'item_name',
+        'item_slug',
         'item_img',
         'item_state',
         'item_cooldown',
         'item_max_ammo',
         'item_multicast',
-        'slug',
 
     ];
 
@@ -29,7 +29,7 @@ class Item extends Model
 
         $this->attributes['item_name'] = $value;
 
-        $this->attributes['slug'] = Str::slug($value);
+        $this->attributes['item_slug'] = Str::slug($value);
     }
 
     ///// Relations /////
