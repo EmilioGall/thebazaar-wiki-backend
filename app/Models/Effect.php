@@ -26,12 +26,12 @@ class Effect extends Model
     public function itemTiers()
     {
 
-        return $this->belongsToMany(ItemTier::class)->withPivot('primary_value', 'secondary_value');
+        return $this->belongsToMany(ItemTier::class, 'effect_item_tier')->withPivot('primary_value', 'secondary_value');
     }
 
     public function skillTiers()
     {
         
-        return $this->belongsToMany(SkillTier::class)->withPivot('primary_value', 'secondary_value');
+        return $this->belongsToMany(SkillTier::class, 'effect_skill_tier')->withPivot('primary_value', 'secondary_value');
     }
 }

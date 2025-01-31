@@ -26,6 +26,8 @@ return new class extends Migration
 
             // Primary key
             $table->primary(['effect_id', 'item_tier_id']);
+
+            $table->timestamps();
         });
     }
 

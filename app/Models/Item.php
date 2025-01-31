@@ -65,7 +65,7 @@ class Item extends Model
     public function tiers()
     {
 
-        return $this->belongsToMany(Tier::class, 'item_tier')->withPivot('effect_id');
+        return $this->belongsToMany(Tier::class, 'item_tier');
     }
 
     public function effects()

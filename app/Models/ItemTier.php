@@ -9,6 +9,15 @@ class ItemTier extends Model
 {
     use HasFactory;
 
+    protected $table = 'item_tier';
+
+    protected $fillable = [
+
+        'item_id',
+        'tier_id'
+
+    ];
+
     ///// Relations /////
 
     public function item()
@@ -23,9 +32,9 @@ class ItemTier extends Model
         return $this->belongsTo(Tier::class);
     }
 
-    public function effect()
+    public function effects()
     {
         
-        return $this->belongsTo(Effect::class);
+        return $this->belongsToMany(Effect::class, 'effect_item_tier')->withPivot('primary_value', 'secondary_value');
     }
 }
