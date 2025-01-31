@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('tier_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade')->nullable();
 
             $table->string('merchant_name')->unique();
+            $table->string('merchant_slug')->unique();
             $table->string('merchant_img')->unique()->nullable();
             $table->bigInteger('reroll_cost')->nullable();
         

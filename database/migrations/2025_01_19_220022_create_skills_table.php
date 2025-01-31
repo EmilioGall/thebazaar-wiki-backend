@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('min_tier_id')->nullable()->constrained('tiers')->onUpdate('cascade')->onDelete('set null');
 
             $table->string('skill_name')->unique();
+            $table->string('skill_slug')->unique();
             $table->string('skill_img')->unique()->nullable();
 
             $table->timestamps();

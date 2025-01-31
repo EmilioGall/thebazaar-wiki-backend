@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('min_tier_id')->nullable()->constrained('tiers')->onUpdate('cascade')->onDelete('set null');
 
             $table->string('item_name', 255)->unique();
+            $table->string('item_slug')->unique();
             $table->string('item_img')->unique()->nullable();
             $table->boolean('item_state')->default(false);
             $table->unsignedBigInteger('item_cooldown')->nullable();

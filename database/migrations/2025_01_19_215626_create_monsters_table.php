@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('tier_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade')->nullable();
 
             $table->string('monster_name')->unique();
+            $table->string('monster_slug')->unique();
             $table->string('monster_img')->unique()->nullable();
             $table->bigInteger('monster_health')->nullable();
 
