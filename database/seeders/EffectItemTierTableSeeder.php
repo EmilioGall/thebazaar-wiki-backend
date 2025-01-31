@@ -30,18 +30,22 @@ class EffectItemTierTableSeeder extends Seeder
                 foreach ($tiers as $tier) {
 
                     $itemTier = ItemTier::where('item_id', $item->id)->where('tier_id', $tier->id)->first();
-                    
+
                     if ($itemTier) {
 
                         $primaryValue = $this->getPrimaryValue($effectData, $tier);
+                        $secondaryValue = $this->getSecondaryValue($effectData, $tier);
 
                         $effectItemTier = EffectItemTier::firstOrNew([
+
                             'effect_id' => $effect->id,
                             'item_tier_id' => $itemTier->id,
+
                         ]);
 
                         $effectItemTier->primary_value = $primaryValue;
-                        
+                        $effectItemTier->secondary_value = $secondaryValue;
+
                         $effectItemTier->save();
                     }
                 }
@@ -49,7 +53,6 @@ class EffectItemTierTableSeeder extends Seeder
         }
     }
 
-    // Funzione per ottenere il valore primario dell'effetto per la combinazione di tier
     private function getPrimaryValue($effect, $tier)
     {
         switch ($tier->tier_label) {
@@ -61,6 +64,22 @@ class EffectItemTierTableSeeder extends Seeder
                 return $effect['primary_value_gold'];
             case 'diamond':
                 return $effect['primary_value_diamond'];
+            default:
+                return null;
+        }
+    }
+
+    private function getSecondaryValue($effect, $tier)
+    {
+        switch ($tier->tier_label) {
+            case 'bronze':
+                return $effect['secondary_value_bronze'];
+            case 'silver':
+                return $effect['secondary_value_silver'];
+            case 'gold':
+                return $effect['secondary_value_gold'];
+            case 'diamond':
+                return $effect['secondary_value_diamond'];
             default:
                 return null;
         }
