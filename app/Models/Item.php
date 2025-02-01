@@ -81,6 +81,6 @@ class Item extends Model
     public function effects()
     {
 
-        return $this->hasManyThrough(Effect::class, ItemTier::class);
+        return $this->hasManyThrough(Effect::class, ItemTier::class, 'item_id', 'id', 'id', 'effect_id');
     }
 }

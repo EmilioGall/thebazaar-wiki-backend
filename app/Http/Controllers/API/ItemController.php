@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\Item;
+use App\Models\ItemTier;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
@@ -13,10 +14,31 @@ class ItemController extends Controller
      */
     public function index()
     {
-        // Ottieni tutti gli items senza eager loading
-        $items = Item::all();
 
-        return response()->json($items);
+        $items = Item::with([
+            'enchantments',
+            'hero',
+            'merchants',
+            'monsters',
+            'tags',
+            'minTier',
+            'tiers',
+        ])->get();
+
+        $itemsTiers = ItemTier::with([
+            'effects',
+        ])->get();
+
+        $data = [
+
+            'result' => [
+                'items' =>$items,
+                'effects' =>$itemsTiers
+            ],
+            'success' => true
+        ];
+
+        return response()->json($data);
     }
 
     /**
@@ -24,9 +46,23 @@ class ItemController extends Controller
      */
     public function show($slug)
     {
-        // Trova l'item tramite lo slug senza eager loading
-        $item = Item::where('item_slug', $slug)->firstOrFail();
 
-        return response()->json($item);
+        $item = Item::with([
+            'enchantments',
+            'hero',
+            'merchants',
+            'monsters',
+            'tags',
+            'minTier',
+            'tiers',
+        ])->where('item_slug', $slug)->firstOrFail();
+
+        $data = [
+
+            'result' => $item,
+            'success' => true
+        ];
+
+        return response()->json($data);
     }
 }
