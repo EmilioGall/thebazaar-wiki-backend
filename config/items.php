@@ -21,7 +21,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => '{ Shield } equal to { n }x the value of the adjacent items.',
+            'effect_description' => '{ Shield } equal to { n1 }x the value of the adjacent items.',
             'primary_value_bronze' => null,
             'primary_value_silver' => null,
             'primary_value_gold' => 1,
@@ -72,7 +72,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => 'Adjacent items have +{ n }% { Crit } chance.',
+            'effect_description' => 'Adjacent items have +{ n1 }% { Crit } chance.',
             'primary_value_bronze' => 3,
             'primary_value_silver' => 6,
             'primary_value_gold' => 9,
@@ -85,7 +85,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => 'When you sell this, your items gain +{ n }% { Crit } chance.',
+            'effect_description' => 'When you sell this, your items gain +{ n1 }% { Crit } chance.',
             'primary_value_bronze' => 1,
             'primary_value_silver' => 2,
             'primary_value_gold' => 3,
@@ -137,7 +137,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => 'Deal { n } { Damage }.',
+            'effect_description' => 'Deal { n1 } { Damage }.',
             'primary_value_bronze' => 5,
             'primary_value_silver' => 10,
             'primary_value_gold' => 20,
@@ -150,7 +150,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => 'When you use the Core or another Ray, your Weapons gain { n } { Damage } for the fight.',
+            'effect_description' => 'When you use the Core or another Ray, your Weapons gain { n1 } { Damage } for the fight.',
             'primary_value_bronze' => 3,
             'primary_value_silver' => 6,
             'primary_value_gold' => 9,
@@ -202,7 +202,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => '{ Slow } { n } items for 3 second(s).',
+            'effect_description' => '{ Slow } { n1 } items for 3 second(s).',
             'primary_value_bronze' => null,
             'primary_value_silver' => 1,
             'primary_value_gold' => 2,
@@ -267,7 +267,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => "{ Heal } equal to { n }x this item's { Value }.",
+            'effect_description' => "{ Heal } equal to { n1 }x this item's { Value }.",
             'primary_value_bronze' => 1,
             'primary_value_silver' => 2,
             'primary_value_gold' => 3,
@@ -280,7 +280,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => 'When you buy another Aquatic item, this gains { n } { Value }.',
+            'effect_description' => 'When you buy another Aquatic item, this gains { n1 } { Value }.',
             'primary_value_bronze' => 1,
             'primary_value_silver' => 2,
             'primary_value_gold' => 3,
@@ -332,7 +332,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => "Deal { Damage } equal to { n }% of your enemy's Max Health.",
+            'effect_description' => "Deal { Damage } equal to { n1 }% of your enemy's Max Health.",
             'primary_value_bronze' => null,
             'primary_value_silver' => null,
             'primary_value_gold' => 20,
@@ -345,7 +345,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => "When you use an adjacent item, this gains { Haste } for { n } second(s).",
+            'effect_description' => "When you use an adjacent item, this gains { Haste } for { n1 } second(s).",
             'primary_value_bronze' => null,
             'primary_value_silver' => null,
             'primary_value_gold' => 2,
@@ -410,7 +410,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => "When you lose { Shield }, this gains damage equal to { n }% of the { Shield } lost.",
+            'effect_description' => "When you lose { Shield }, this gains damage equal to { n1 }% of the { Shield } lost.",
             'primary_value_bronze' => null,
             'primary_value_silver' => 10,
             'primary_value_gold' => 20,
@@ -462,7 +462,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => "Destroy this and { n } small enemy items for the fight.",
+            'effect_description' => "Destroy this and { n1 } small enemy items for the fight.",
             'primary_value_bronze' => null,
             'primary_value_silver' => null,
             'primary_value_gold' => null,
@@ -514,7 +514,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => "{ Shield } { n }.",
+            'effect_description' => "{ Shield } { n1 }.",
             'primary_value_bronze' => null,
             'primary_value_silver' => 25,
             'primary_value_gold' => 50,
@@ -527,7 +527,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => "Adjacent weapons gain { n } { Damage } for the fight.",
+            'effect_description' => "Adjacent weapons gain { n1 } { Damage } for the fight.",
             'primary_value_bronze' => null,
             'primary_value_silver' => 10,
             'primary_value_gold' => 20,
@@ -579,7 +579,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => 'Deal { n } { Damage }.',
+            'effect_description' => 'Deal { n1 } { Damage }.',
             'primary_value_bronze' => null,
             'primary_value_silver' => 50,
             'primary_value_gold' => 100,
@@ -592,7 +592,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => "When you { Haste }, this gains { n } { Damage } for the fight.",
+            'effect_description' => "When you { Haste }, this gains { n1 } { Damage } for the fight.",
             'primary_value_bronze' => null,
             'primary_value_silver' => 25,
             'primary_value_gold' => 50,
