@@ -22,18 +22,13 @@ class ItemController extends Controller
             'monsters',
             'tags',
             'minTier',
-            'tiers',
-        ])->get();
-
-        $itemsTiers = ItemTier::with([
-            'effects',
+            'tiers.effects',
         ])->get();
 
         $data = [
 
             'result' => [
-                'items' =>$items,
-                'effects' =>$itemsTiers
+                'items' => $items,
             ],
             'success' => true
         ];
@@ -54,7 +49,9 @@ class ItemController extends Controller
             'monsters',
             'tags',
             'minTier',
-            'tiers',
+            'tiers.effects' => function ($query) {
+                $query->withPivot('primary_value', 'secondary_value');
+            },
         ])->where('item_slug', $slug)->firstOrFail();
 
         $data = [
