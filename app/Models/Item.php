@@ -78,9 +78,9 @@ class Item extends Model
         return $this->belongsToMany(Tier::class, 'item_tier');
     }
 
-    public function effects()
+    public function itemTiers()
     {
-
-        return $this->hasManyThrough(Effect::class, ItemTier::class, 'item_id', 'id', 'id', 'effect_id');
+        
+        return $this->hasMany(ItemTier::class);
     }
 }

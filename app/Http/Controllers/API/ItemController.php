@@ -22,7 +22,7 @@ class ItemController extends Controller
             'monsters',
             'tags',
             'minTier',
-            'tiers.effects',
+            'itemTiers.effects',
         ])->get();
 
         $data = [
