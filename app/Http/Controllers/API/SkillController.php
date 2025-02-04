@@ -4,30 +4,30 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Item;
+use App\Models\Skill;
 
-class ItemController extends Controller
+class SkillController extends Controller
 {
     /**
-     * Display a listing of the items.
+     * Display a listing of the skills.
      */
     public function index()
     {
 
-        $items = Item::with([
+        $skills = Skill::with([
             'enchantments',
             'hero',
             'merchants',
             'monsters',
             'tags',
             'minTier',
-            'itemTiers.effects',
+            'skillTiers.effects',
         ])->get();
 
         $data = [
 
             'result' => [
-                'items' => $items,
+                'skills' => $skills,
             ],
             'success' => true
         ];
@@ -36,12 +36,12 @@ class ItemController extends Controller
     }
 
     /**
-     * Display the specified item by slug.
+     * Display the specified skill by slug.
      */
     public function show($slug)
     {
 
-        $item = Item::with([
+        $skill = Skill::with([
             'enchantments',
             'hero',
             'merchants',
@@ -51,11 +51,11 @@ class ItemController extends Controller
             'tiers.effects' => function ($query) {
                 $query->withPivot('primary_value', 'secondary_value');
             },
-        ])->where('item_slug', $slug)->firstOrFail();
+        ])->where('skill_slug', $slug)->firstOrFail();
 
         $data = [
 
-            'result' => $item,
+            'result' => $skill,
             'success' => true
         ];
 
