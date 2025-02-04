@@ -30,7 +30,7 @@ class Skill extends Model
 
     ///// Relations /////
 
-    public function heroes()
+    public function hero()
     {
 
         return $this->belongsTo(Hero::class);
@@ -65,12 +65,12 @@ class Skill extends Model
     public function tiers()
     {
 
-        return $this->belongsToMany(Tier::class, 'skill_tier')->withPivot('effect_id');
+        return $this->belongsToMany(Tier::class, 'skill_tier');
     }
 
-    public function effects()
+    public function skillTiers()
     {
-
-        return $this->hasManyThrough(Effect::class, SkillTier::class);
+        
+        return $this->hasMany(SkillTier::class);
     }
 }

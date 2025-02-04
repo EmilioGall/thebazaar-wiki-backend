@@ -9,12 +9,21 @@ class SkillTier extends Model
 {
     use HasFactory;
 
+    protected $table = 'skill_tier';
+
+    protected $fillable = [
+
+        'skill_id',
+        'tier_id'
+
+    ];
+
     ///// Relations /////
 
-    public function item()
+    public function skill()
     {
 
-        return $this->belongsTo(Item::class);
+        return $this->belongsTo(Skill::class);
     }
 
     public function tier()
@@ -23,9 +32,9 @@ class SkillTier extends Model
         return $this->belongsTo(Tier::class);
     }
 
-    public function effect()
+    public function effects()
     {
         
-        return $this->belongsTo(Effect::class);
+        return $this->belongsToMany(Effect::class, 'effect_skill_tier')->withPivot('primary_value', 'secondary_value');
     }
 }
