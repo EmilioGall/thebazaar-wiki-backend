@@ -31,5 +31,26 @@ class EffectsTableSeeder extends Seeder
                 }
             }
         }
+
+        $skills = config('skills');
+
+        foreach ($skills as $skill) {
+
+            if (!empty($skill['effects'])) {
+
+                foreach ($skill['effects'] as $effect) {
+
+                    if (!empty($effect['effect_description'])) {
+
+                        Effect::firstOrCreate([
+
+                            'effect_description' => $effect['effect_description'],
+
+                        ]);
+                    }
+                }
+            }
+        }
+
     }
 }

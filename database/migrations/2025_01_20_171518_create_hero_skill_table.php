@@ -15,7 +15,7 @@ return new class extends Migration
 
             // Foreign key
             $table->unsignedBigInteger('hero_id');
-            $table->foreign('hero_id')->references('id')->on('heros')->cascadeOnDelete();
+            $table->foreign('hero_id')->references('id')->on('heroes')->cascadeOnDelete();
 
             // Foreign key
             $table->unsignedBigInteger('skill_id');
