@@ -15,7 +15,6 @@ class SkillController extends Controller
     {
 
         $skills = Skill::with([
-            'enchantments',
             'hero',
             'merchants',
             'monsters',
@@ -42,15 +41,12 @@ class SkillController extends Controller
     {
 
         $skill = Skill::with([
-            'enchantments',
             'hero',
             'merchants',
             'monsters',
             'tags',
             'minTier',
-            'tiers.effects' => function ($query) {
-                $query->withPivot('primary_value', 'secondary_value');
-            },
+            'skillTiers.effects',
         ])->where('skill_slug', $slug)->firstOrFail();
 
         $data = [
