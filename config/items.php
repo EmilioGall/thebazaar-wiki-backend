@@ -21,7 +21,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => '{ Shield } equal to { n1 }x the value of the adjacent items.',
+            'effect_description' => 'Shield equal to { n1 }x the value of the adjacent items.',
             'primary_value_bronze' => null,
             'primary_value_silver' => null,
             'primary_value_gold' => 1,
@@ -38,17 +38,17 @@ return [
 
       'enchantments' => [
 
-         'deadly' => '+50% { Crit } Chance',
-         'fiery' => '{ Burn } 3.',
-         'golden' => 'Adjacent items have +50% { Value }.',
-         'heavy' => '{ Slow } 1 item for 1 second(s).',
-         'icy' => '{ Freeze } 1 item for 1 second(s).',
+         'deadly' => '+50% Crit Chance',
+         'fiery' => 'Burn 3.',
+         'golden' => 'Adjacent items have +50% Value.',
+         'heavy' => 'Slow 1 item for 1 second(s).',
+         'icy' => 'Freeze 1 item for 1 second(s).',
          'obsidian' => null,
-         'restorative' => "{ Heal } equal to the { Value } of adjacent items.",
-         'shielded' => "This has double { Shield }.",
-         'shiny' => 'This has +1 { Multicast }.',
-         'toxic' => '{ Poison } 2.',
-         'turbo' => '{ Haste } 1 item for 1 second(s).',
+         'restorative' => "Heal equal to the Value of adjacent items.",
+         'shielded' => "This has double Shield.",
+         'shiny' => 'This has +1 Multicast.',
+         'toxic' => 'Poison 2.',
+         'turbo' => 'Haste 1 item for 1 second(s).',
       ]
 
    ],
@@ -72,7 +72,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => 'Adjacent items have +{ n1 }% { Crit } chance.',
+            'effect_description' => 'Adjacent items have +{ n1 }% Crit Chance.',
             'primary_value_bronze' => 3,
             'primary_value_silver' => 6,
             'primary_value_gold' => 9,
@@ -85,7 +85,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => 'When you sell this, your items gain +{ n1 }% { Crit } chance.',
+            'effect_description' => 'When you sell this, your items gain +{ n1 }% Crit Chance.',
             'primary_value_bronze' => 1,
             'primary_value_silver' => 2,
             'primary_value_gold' => 3,
@@ -110,7 +110,7 @@ return [
          'obsidian' => null,
          'restorative' => null,
          'shielded' => null,
-         'shiny' => 'This gives double + { Crit } Chance.',
+         'shiny' => 'This gives double + Crit Chance.',
          'toxic' => null,
          'turbo' => null,
 
@@ -137,7 +137,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => 'Deal { n1 } { Damage }.',
+            'effect_description' => 'Deal { n1 } Damage.',
             'primary_value_bronze' => 5,
             'primary_value_silver' => 10,
             'primary_value_gold' => 20,
@@ -150,7 +150,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => 'When you use the Core or another Ray, your Weapons gain { n1 } { Damage } for the fight.',
+            'effect_description' => 'When you use the Core or another Ray, your Weapons gain { n1 } Damage for the fight.',
             'primary_value_bronze' => 3,
             'primary_value_silver' => 6,
             'primary_value_gold' => 9,
@@ -167,17 +167,17 @@ return [
 
       'enchantments' => [
 
-         'deadly' => '+50% { Crit } Chance',
-         'fiery' => '{ Burn } 4.',
+         'deadly' => '+50% Crit Chance',
+         'fiery' => 'Burn 4.',
          'golden' => null,
-         'heavy' => '{ Slow } 1 item for 1 second(s).',
-         'icy' => '{ Freeze } 1 item for 1 second(s).',
-         'obsidian' => 'This has { Lifesteal }.',
-         'restorative' => "{ Heal } equal to this item's { Damage }.",
-         'shielded' => "{ Shield } equal to this item's { Damage }.",
-         'shiny' => 'This has +1 { Multicast }.',
-         'toxic' => '{ Poison } 2.',
-         'turbo' => '{ Haste } 1 item for 1 second(s).',
+         'heavy' => 'Slow 1 item for 1 second(s).',
+         'icy' => 'Freeze 1 item for 1 second(s).',
+         'obsidian' => 'This has Lifesteal.',
+         'restorative' => "Heal equal to this item's Damage.",
+         'shielded' => "Shield equal to this item's Damage.",
+         'shiny' => 'This has +1 Multicast.',
+         'toxic' => 'Poison 2.',
+         'turbo' => 'Haste 1 item for 1 second(s).',
 
       ],
 
@@ -202,7 +202,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => '{ Slow } { n1 } items for 3 second(s).',
+            'effect_description' => 'Slow { n1 } items for 3 second(s).',
             'primary_value_bronze' => null,
             'primary_value_silver' => 1,
             'primary_value_gold' => 2,
@@ -215,7 +215,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => 'Your other { Slow } items have +1 { Slow }.',
+            'effect_description' => 'Your other Slow items have +1 Slow.',
             'primary_value_bronze' => null,
             'primary_value_silver' => null,
             'primary_value_gold' => null,
@@ -233,16 +233,16 @@ return [
       'enchantments' => [
 
          'deadly' => null,
-         'fiery' => '{ Burn } 4.',
+         'fiery' => 'Burn 4.',
          'golden' => null,
-         'heavy' => 'This has double { Slow } duration.',
-         'icy' => '{ Freeze } 1 item for 1 second(s).',
+         'heavy' => 'This has double Slow duration.',
+         'icy' => 'Freeze 1 item for 1 second(s).',
          'obsidian' => null,
-         'restorative' => '{ Heal } 40.',
-         'shielded' => '{ Shield } 25.',
-         'shiny' => 'This has +1 { Multicast }.',
-         'toxic' => '{ Poison } 2.',
-         'turbo' => '{ Haste } 1 item for 1 second(s).',
+         'restorative' => 'Heal 40.',
+         'shielded' => 'Shield 25.',
+         'shiny' => 'This has +1 Multicast.',
+         'toxic' => 'Poison 2.',
+         'turbo' => 'Haste 1 item for 1 second(s).',
 
       ],
 
@@ -267,7 +267,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => "{ Heal } equal to { n1 }x this item's { Value }.",
+            'effect_description' => "Heal equal to { n1 }x this item's Value.",
             'primary_value_bronze' => 1,
             'primary_value_silver' => 2,
             'primary_value_gold' => 3,
@@ -280,7 +280,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => 'When you buy another Aquatic item, this gains { n1 } { Value }.',
+            'effect_description' => 'When you buy another Aquatic item, this gains { n1 } Value.',
             'primary_value_bronze' => 1,
             'primary_value_silver' => 2,
             'primary_value_gold' => 3,
@@ -297,17 +297,17 @@ return [
 
       'enchantments' => [
 
-         'deadly' => '+50% { Crit } Chance',
-         'fiery' =>  "{ Burn } equal to this item's { Value }.",
-         'golden' => 'Double { Value }',
-         'heavy' => '{ Slow } 1 item for 1 second(s).',
-         'icy' => '{ Freeze } 1 item for 1 second(s).',
+         'deadly' => '+50% Crit Chance',
+         'fiery' =>  "Burn equal to this item's Value.",
+         'golden' => 'Double Value',
+         'heavy' => 'Slow 1 item for 1 second(s).',
+         'icy' => 'Freeze 1 item for 1 second(s).',
          'obsidian' => null,
-         'restorative' => 'This has double { Heal }.',
-         'shielded' => "{ Shield } equal to this item's { Heal }.",
+         'restorative' => 'This has double Heal.',
+         'shielded' => "Shield equal to this item's Heal.",
          'shiny' => 'This has +1 Multicast.',
-         'toxic' => "{ Poison } equal to this item's { Value }.",
-         'turbo' => '{ Haste } 1 item for 1 second(s).',
+         'toxic' => "Poison equal to this item's Value.",
+         'turbo' => 'Haste 1 item for 1 second(s).',
 
       ],
 
@@ -332,7 +332,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => "Deal { Damage } equal to { n1 }% of your enemy's Max Health.",
+            'effect_description' => "Deal Damage equal to { n1 }% of your enemy's Max Health.",
             'primary_value_bronze' => null,
             'primary_value_silver' => null,
             'primary_value_gold' => 20,
@@ -345,7 +345,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => "When you use an adjacent item, this gains { Haste } for { n1 } second(s).",
+            'effect_description' => "When you use an adjacent item, this gains Haste for { n1 } second(s).",
             'primary_value_bronze' => null,
             'primary_value_silver' => null,
             'primary_value_gold' => 2,
@@ -362,17 +362,17 @@ return [
 
       'enchantments' => [
 
-         'deadly' => '+50% { Crit } Chance',
-         'fiery' =>  "{ Burn } 18",
+         'deadly' => '+50% Crit Chance',
+         'fiery' =>  "Burn 18",
          'golden' => null,
-         'heavy' => '{ Slow } 2 item for 4 second(s).',
-         'icy' => '{ Freeze } 1 item for 4 second(s).',
-         'obsidian' => 'This has { Lifesteal }.',
-         'restorative' => "{ Heal } equal to this item's { Damage }.",
-         'shielded' => "{ Shield } equal to this item's { Damage }.",
+         'heavy' => 'Slow 2 item for 4 second(s).',
+         'icy' => 'Freeze 1 item for 4 second(s).',
+         'obsidian' => 'This has Lifesteal.',
+         'restorative' => "Heal equal to this item's Damage.",
+         'shielded' => "Shield equal to this item's Damage.",
          'shiny' => 'This has +1 Multicast.',
-         'toxic' => "{ Poison } 12",
-         'turbo' => '{ Haste } 1 item for 2 second(s).',
+         'toxic' => "Poison 12",
+         'turbo' => 'Haste 1 item for 2 second(s).',
 
       ],
 
@@ -397,7 +397,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => "Deal 10 { Damage }.",
+            'effect_description' => "Deal 10 Damage.",
             'primary_value_bronze' => null,
             'primary_value_silver' => null,
             'primary_value_gold' => null,
@@ -410,7 +410,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => "When you lose { Shield }, this gains damage equal to { n1 }% of the { Shield } lost.",
+            'effect_description' => "When you lose Shield, this gains damage equal to { n1 }% of the Shield lost.",
             'primary_value_bronze' => null,
             'primary_value_silver' => 10,
             'primary_value_gold' => 20,
@@ -427,17 +427,17 @@ return [
 
       'enchantments' => [
 
-         'deadly' => '+50% { Crit } Chance',
-         'fiery' =>  "{ Burn } 6",
+         'deadly' => '+50% Crit Chance',
+         'fiery' =>  "Burn 6",
          'golden' => null,
-         'heavy' => '{ Slow } 2 item for 1 second(s).',
-         'icy' => '{ Freeze } 1 item for 1 second(s).',
-         'obsidian' => 'This has { Lifesteal }.',
-         'restorative' => "{ Heal } equal to this item's { Damage }.",
-         'shielded' => "{ Shield } equal to this item's { Damage }.",
+         'heavy' => 'Slow 2 item for 1 second(s).',
+         'icy' => 'Freeze 1 item for 1 second(s).',
+         'obsidian' => 'This has Lifesteal.',
+         'restorative' => "Heal equal to this item's Damage.",
+         'shielded' => "Shield equal to this item's Damage.",
          'shiny' => 'This has +1 Multicast.',
-         'toxic' => "{ Poison } 4",
-         'turbo' => '{ Haste } 2 item for 1 second(s).',
+         'toxic' => "Poison 4",
+         'turbo' => 'Haste 2 item for 1 second(s).',
 
       ],
 
@@ -480,16 +480,16 @@ return [
       'enchantments' => [
 
          'deadly' => null,
-         'fiery' =>  "{ Burn } 22",
+         'fiery' =>  "Burn 22",
          'golden' => null,
-         'heavy' => '{ Slow } 3 item for 3 second(s).',
-         'icy' => '{ Freeze } 1 item for 4 second(s).',
+         'heavy' => 'Slow 3 item for 3 second(s).',
+         'icy' => 'Freeze 1 item for 4 second(s).',
          'obsidian' => null,
-         'restorative' => "{ Heal } 225.",
-         'shielded' => "{ Shield } 150.",
+         'restorative' => "Heal 225.",
+         'shielded' => "Shield 150.",
          'shiny' => 'This has +1 Multicast.',
-         'toxic' => "{ Poison } 15",
-         'turbo' => '{ Haste } 3 item for 3 second(s).',
+         'toxic' => "Poison 15",
+         'turbo' => 'Haste 3 item for 3 second(s).',
 
       ],
 
@@ -514,7 +514,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => "{ Shield } { n1 }.",
+            'effect_description' => "Shield { n1 }.",
             'primary_value_bronze' => null,
             'primary_value_silver' => 25,
             'primary_value_gold' => 50,
@@ -527,7 +527,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => "Adjacent weapons gain { n1 } { Damage } for the fight.",
+            'effect_description' => "Adjacent weapons gain { n1 } Damage for the fight.",
             'primary_value_bronze' => null,
             'primary_value_silver' => 10,
             'primary_value_gold' => 20,
@@ -544,17 +544,17 @@ return [
 
       'enchantments' => [
 
-         'deadly' => '+50% { Crit } Chance',
-         'fiery' =>  "{ Burn } 7",
+         'deadly' => '+50% Crit Chance',
+         'fiery' =>  "Burn 7",
          'golden' => null,
-         'heavy' => '{ Slow } 2 item for 2 second(s).',
-         'icy' => '{ Freeze } 1 item for 2 second(s).',
+         'heavy' => 'Slow 2 item for 2 second(s).',
+         'icy' => 'Freeze 1 item for 2 second(s).',
          'obsidian' => null,
-         'restorative' => "{ Heal } equal to this item's { Shield }.",
-         'shielded' => "This has double { Shield }.",
+         'restorative' => "Heal equal to this item's Shield.",
+         'shielded' => "This has double Shield.",
          'shiny' => 'This has +1 Multicast.',
-         'toxic' => "{ Poison } 5",
-         'turbo' => '{ Haste } 2 item for 2 second(s).',
+         'toxic' => "Poison 5",
+         'turbo' => 'Haste 2 item for 2 second(s).',
 
       ],
 
@@ -579,7 +579,7 @@ return [
       'effects' => [
 
          [
-            'effect_description' => 'Deal { n1 } { Damage }.',
+            'effect_description' => 'Deal { n1 } Damage.',
             'primary_value_bronze' => null,
             'primary_value_silver' => 50,
             'primary_value_gold' => 100,
@@ -592,7 +592,7 @@ return [
             'secondary_value_legendary' => null,
          ],
          [
-            'effect_description' => "When you { Haste }, this gains { n1 } { Damage } for the fight.",
+            'effect_description' => "When you Haste, this gains { n1 } Damage for the fight.",
             'primary_value_bronze' => null,
             'primary_value_silver' => 25,
             'primary_value_gold' => 50,
@@ -609,17 +609,17 @@ return [
 
       'enchantments' => [
 
-         'deadly' => '+50% { Crit } Chance',
-         'fiery' =>  "{ Burn } 12. When you Haste, this gains +3 Burn for the fight.",
+         'deadly' => '+50% Crit Chance',
+         'fiery' =>  "Burn 12. When you Haste, this gains +3 Burn for the fight.",
          'golden' => null,
-         'heavy' => '{ Slow } 2 item for 3 second(s).',
-         'icy' => '{ Freeze } 1 item for 3 second(s).',
-         'obsidian' => 'This has { Lifesteal }.',
-         'restorative' => "{ Heal } equal to this item's { Damage }.",
-         'shielded' => "{ Shield } equal to this item's { Damage }.",
+         'heavy' => 'Slow 2 item for 3 second(s).',
+         'icy' => 'Freeze 1 item for 3 second(s).',
+         'obsidian' => 'This has Lifesteal.',
+         'restorative' => "Heal equal to this item's Damage.",
+         'shielded' => "Shield equal to this item's Damage.",
          'shiny' => 'This has +1 Multicast.',
-         'toxic' => "{ Poison } 8. When you Haste, this gains +2 { Poison } for the fight.",
-         'turbo' => '{ Haste } 2 item for 3 second(s).',
+         'toxic' => "Poison 8. When you Haste, this gains +2 Poison for the fight.",
+         'turbo' => 'Haste 2 item for 3 second(s).',
 
       ],
 
