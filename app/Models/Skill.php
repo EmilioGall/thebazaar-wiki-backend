@@ -30,10 +30,10 @@ class Skill extends Model
 
     ///// Relations /////
 
-    public function hero()
+    public function heroes()
     {
 
-        return $this->belongsTo(Hero::class);
+        return $this->belongsToMany(Hero::class, 'hero_skill');
     }
 
     public function merchants()

@@ -28,6 +28,6 @@ class Hero extends Model
     public function skills()
     {
 
-        return $this->hasMany(Skill::class);
+        return $this->belongsToMany(Skill::class, 'hero_skill');
     }
 }
