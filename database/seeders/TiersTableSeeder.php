@@ -94,6 +94,31 @@ class TiersTableSeeder extends Seeder
             [
                 'tier_label' => 'bronze',
                 'tier_frame' => null,
+                'tier_size' => 'rounded'
+            ],
+            [
+                'tier_label' => 'silver',
+                'tier_frame' => null,
+                'tier_size' => 'rounded'
+            ],
+            [
+                'tier_label' => 'gold',
+                'tier_frame' => null,
+                'tier_size' => 'rounded'
+            ],
+            [
+                'tier_label' => 'diamond',
+                'tier_frame' => null,
+                'tier_size' => 'rounded'
+            ],
+            [
+                'tier_label' => 'legendary',
+                'tier_frame' => null,
+                'tier_size' => 'rounded'
+            ],
+            [
+                'tier_label' => 'bronze',
+                'tier_frame' => null,
                 'tier_size' => null
             ],
             [
