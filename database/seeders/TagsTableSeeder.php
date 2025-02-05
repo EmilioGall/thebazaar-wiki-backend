@@ -48,6 +48,7 @@ class TagsTableSeeder extends Seeder
             ['tag_name' => 'Economy', 'tag_icon' => null, 'tag_type' => 'category'],
             ['tag_name' => 'Food', 'tag_icon' => null, 'tag_type' => 'category'],
             ['tag_name' => 'Friend', 'tag_icon' => null, 'tag_type' => 'category'],
+            ['tag_name' => 'Junk', 'tag_icon' => null, 'tag_type' => 'category'],
             ['tag_name' => 'Loot', 'tag_icon' => null, 'tag_type' => 'category'],
             ['tag_name' => 'NonWeapon', 'tag_icon' => null, 'tag_type' => 'category'],
             ['tag_name' => 'Potion', 'tag_icon' => null, 'tag_type' => 'category'],
