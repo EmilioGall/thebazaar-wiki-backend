@@ -33,6 +33,8 @@ class DatabaseSeeder extends Seeder
             SkillTagTableSeeder::class,
             SkillTierTableSeeder::class,
             EffectSkillTierTableSeeder::class,
+            MerchantsTableSeeder::class,
+            
 
         ]);
 
