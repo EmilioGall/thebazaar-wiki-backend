@@ -64,14 +64,14 @@ class Item extends Model
         return $this->belongsToMany(Tag::class, 'item_tag');
     }
 
-    // Relazione al tier minimo
+    // Relationship to minimum tier
     public function minTier()
     {
 
         return $this->belongsTo(Tier::class, 'min_tier_id');
     }
 
-    // Relazione many-to-many per tiers
+    // Relationship many-to-many with tier
     public function tiers()
     {
 

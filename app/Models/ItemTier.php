@@ -20,6 +20,12 @@ class ItemTier extends Model
 
     ///// Relations /////
 
+    public function effects()
+    {
+
+        return $this->belongsToMany(Effect::class, 'effect_item_tier')->withPivot('primary_value', 'secondary_value');
+    }
+
     public function item()
     {
 
@@ -30,11 +36,5 @@ class ItemTier extends Model
     {
 
         return $this->belongsTo(Tier::class);
-    }
-
-    public function effects()
-    {
-        
-        return $this->belongsToMany(Effect::class, 'effect_item_tier')->withPivot('primary_value', 'secondary_value');
     }
 }

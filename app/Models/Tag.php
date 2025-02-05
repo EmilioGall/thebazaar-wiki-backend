@@ -19,10 +19,10 @@ class Tag extends Model
 
     ///// Relations /////
 
-    public function enchantments()
+    public function enchantment()
     {
 
-        return $this->hasMany(Enchantment::class);
+        return $this->hasOne(Enchantment::class);
     }
 
     public function encounters()

@@ -20,6 +20,12 @@ class SkillTier extends Model
 
     ///// Relations /////
 
+    public function effects()
+    {
+
+        return $this->belongsToMany(Effect::class, 'effect_skill_tier')->withPivot('primary_value', 'secondary_value');
+    }
+
     public function skill()
     {
 
@@ -30,11 +36,5 @@ class SkillTier extends Model
     {
 
         return $this->belongsTo(Tier::class);
-    }
-
-    public function effects()
-    {
-        
-        return $this->belongsToMany(Effect::class, 'effect_skill_tier')->withPivot('primary_value', 'secondary_value');
     }
 }
