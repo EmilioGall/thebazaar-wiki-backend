@@ -20,8 +20,10 @@ return new class extends Migration
             $table->string('merchant_slug')->unique();
             $table->string('merchant_img')->unique()->nullable();
             $table->bigInteger('merchant_day')->nullable();
+            $table->enum('tag_type', ['items', 'skills'])->nullable();
             $table->bigInteger('reroll_cost')->nullable();
-        
+            $table->string('merchant_description')->unique()->nullable();
+
             $table->timestamps();
         });
     }

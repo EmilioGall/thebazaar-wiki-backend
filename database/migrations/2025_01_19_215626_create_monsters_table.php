@@ -19,8 +19,11 @@ return new class extends Migration
             $table->string('monster_name')->unique();
             $table->string('monster_slug')->unique();
             $table->string('monster_img')->unique()->nullable();
+            $table->bigInteger('monster_level')->nullable();
             $table->bigInteger('monster_day')->nullable();
             $table->bigInteger('monster_health')->nullable();
+            $table->bigInteger('monster_gold')->nullable();
+            $table->bigInteger('monster_exp')->nullable();
 
             $table->timestamps();
         });
