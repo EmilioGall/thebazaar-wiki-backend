@@ -41,12 +41,6 @@ class Monster extends Model
         return $this->belongsToMany(Skill::class, 'monster_skill');
     }
 
-    public function tags()
-    {
-
-        return $this->belongsToMany(Tag::class, 'monster_tag');
-    }
-
     public function tier()
     {
 

@@ -25,6 +25,12 @@ class Hero extends Model
         return $this->hasMany(Item::class);
     }
 
+    public function merchants()
+    {
+
+        return $this->belongsToMany(Merchant::class, 'hero_merchant');
+    }
+
     public function skills()
     {
 

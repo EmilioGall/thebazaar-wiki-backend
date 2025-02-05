@@ -30,6 +30,12 @@ class Merchant extends Model
 
     ///// Relations /////
 
+    public function heroes()
+    {
+
+        return $this->belongsToMany(Hero::class, 'hero_merchant');
+    }
+
     public function items()
     {
 
