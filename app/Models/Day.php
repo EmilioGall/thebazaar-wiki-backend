@@ -17,12 +17,6 @@ class Day extends Model
 
     ///// Relations /////
 
-    public function monsters()
-    {
-
-        return $this->hasMany(Monster::class);
-    }
-
     public function tiers()
     {
 

@@ -29,12 +29,6 @@ class Monster extends Model
 
     ///// Relations /////
 
-    public function days()
-    {
-
-        return $this->belongsTo(Day::class);
-    }
-
     public function items()
     {
 
