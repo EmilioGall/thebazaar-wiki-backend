@@ -16,7 +16,7 @@ return [
 
       'tiers_id' => [3, 4], // [Gold, Diamond] - Small
 
-      'tags_id' => [8, 26, 35], // ['shield', 'economy', 'tool']
+      'tags_id' => [8, 26, 36], // ['shield', 'economy', 'tool']
 
       'effects' => [
 
@@ -67,7 +67,7 @@ return [
 
       'tiers_id' => [1, 2, 3, 4], // [Bronze, Silver, Gold, Diamond] - Small
 
-      'tags_id' => [11], // ['crit']
+      'tags_id' => [11, 29], // ['crit', 'junk']
 
       'effects' => [
 
@@ -132,7 +132,7 @@ return [
 
       'tiers_id' => [1, 2, 3, 4], // [Bronze, Silver, Gold, Diamond] - Small
 
-      'tags_id' => [3, 33, 39], // ['damage', 'ray', 'weapon']
+      'tags_id' => [3, 34, 40], // ['damage', 'ray', 'weapon']
 
       'effects' => [
 
@@ -327,7 +327,7 @@ return [
 
       'tiers_id' => [8, 9], // [Gold, Diamond] - Medium
 
-      'tags_id' => [22, 3, 5, 39], // ['aquatic', 'damage', 'haste', 'weapon']
+      'tags_id' => [22, 3, 5, 40], // ['aquatic', 'damage', 'haste', 'weapon']
 
       'effects' => [
 
@@ -392,7 +392,7 @@ return [
 
       'tiers_id' => [7, 8, 9], // [Silver, Gold, Diamond] - Medium
 
-      'tags_id' => [3, 28, 49, 39], // ['damage', 'friend', 'shieldReference', 'weapon']
+      'tags_id' => [3, 28, 50, 40], // ['damage', 'friend', 'shieldReference', 'weapon']
 
       'effects' => [
 
@@ -457,7 +457,7 @@ return [
 
       'tiers_id' => [14], // [Diamond] - Large
 
-      'tags_id' => [34], // ['tech',]
+      'tags_id' => [35], // ['tech']
 
       'effects' => [
 
@@ -509,7 +509,7 @@ return [
 
       'tiers_id' => [7, 8, 9], // [Silver, Gold, Diamond] - Medium
 
-      'tags_id' => [43, 8], //['damageReference', 'shield']
+      'tags_id' => [44, 8], //['damageReference', 'shield']
 
       'effects' => [
 
@@ -574,7 +574,7 @@ return [
 
       'tiers_id' => [7, 8, 9], // [Silver, Gold, Diamond] - Medium
 
-      'tags_id' => [3, 45, 39], // ['damage', 'hasteRefference', 'weapon']
+      'tags_id' => [3, 46, 40], // ['damage', 'hasteRefference', 'weapon']
 
       'effects' => [
 

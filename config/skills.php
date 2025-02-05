@@ -12,7 +12,7 @@ return [
 
       'tiers_id' => [17, 18, 19], // [Silver, Gold, Diamond] - Rounded
 
-      'tags_id' => [40, 18], // ['ammoReference', 'Regeneration']
+      'tags_id' => [41, 18], // ['ammoReference', 'Regeneration']
 
       'effects' => [
 
@@ -44,7 +44,7 @@ return [
 
       'tiers_id' => [18, 19], // [Gold, Diamond] - Rounded
 
-      'tags_id' => [40, 18], // ['ammoReference', 'Regeneration']
+      'tags_id' => [41, 18], // ['ammoReference', 'Regeneration']
 
       'effects' => [
 
@@ -76,7 +76,7 @@ return [
 
       'tiers_id' => [16, 17, 18, 19], // [Bronze, Silver, Gold, Diamond] - Rounded
 
-      'tags_id' => [11, 39], // ['crit', 'weapon']
+      'tags_id' => [11, 40], // ['crit', 'weapon']
 
       'effects' => [
 
@@ -108,7 +108,7 @@ return [
 
       'tiers_id' => [18, 19], // [Gold, Diamond] - Rounded
 
-      'tags_id' => [2, 42], // ['charge', 'critReference']
+      'tags_id' => [2, 43], // ['charge', 'critReference']
 
       'effects' => [
 
@@ -140,7 +140,7 @@ return [
 
       'tiers_id' => [18, 19], // [Gold, Diamond] - Rounded
 
-      'tags_id' => [43, 46], // ['damageReference', 'healthReference']
+      'tags_id' => [44, 47], // ['damageReference', 'healthReference']
 
       'effects' => [
 
@@ -236,7 +236,7 @@ return [
 
       'tiers_id' => [17, 18, 19], // [Silver, Gold, Diamond] - Rounded
 
-      'tags_id' => [1, 30, 7], // ['burn', 'nonWeapon', 'poison']
+      'tags_id' => [1, 31, 7], // ['burn', 'nonWeapon', 'poison']
 
       'effects' => [
 
@@ -300,7 +300,7 @@ return [
 
       'tiers_id' => [16, 17, 18, 19], // [Bronze, Silver, Gold, Diamond] - Rounded
 
-      'tags_id' => [14, 39], // ['health', 'weapon']
+      'tags_id' => [14, 40], // ['health', 'weapon']
 
       'effects' => [
 
