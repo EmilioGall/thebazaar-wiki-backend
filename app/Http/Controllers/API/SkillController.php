@@ -15,7 +15,7 @@ class SkillController extends Controller
     {
 
         $skills = Skill::with([
-            'hero',
+            'heroes',
             'merchants',
             'monsters',
             'tags',
@@ -41,7 +41,7 @@ class SkillController extends Controller
     {
 
         $skill = Skill::with([
-            'hero',
+            'heroes',
             'merchants',
             'monsters',
             'tags',
