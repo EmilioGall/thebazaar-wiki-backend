@@ -19,6 +19,14 @@ class TierController extends Controller
 
         $tiers = Tier::all();
 
-        return response()->json($tiers);
+        $data = [
+
+            'result' => [
+                'items' => $tiers,
+            ],
+            'success' => true
+        ];
+
+        return response()->json($data);
     }
 }

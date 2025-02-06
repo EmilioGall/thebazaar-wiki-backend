@@ -17,8 +17,16 @@ class TagController extends Controller
     public function index()
     {
 
-        $tiers = Tag::all();
+        $tags = Tag::all();
 
-        return response()->json($tiers);
+        $data = [
+
+            'result' => [
+                'items' => $tags,
+            ],
+            'success' => true
+        ];
+
+        return response()->json($data);
     }
 }
