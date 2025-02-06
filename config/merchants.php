@@ -5,7 +5,7 @@ return [
    // Adira
    [
       'merchant_name' => 'Adira',
-      'merchant_img' => null,
+      'merchant_img' => 'img/merchats/avata-adira.webp',
 
       'heroes_id' => [1], // [Common]
       'tier_id' => 24, // Diamond - Null
@@ -23,7 +23,7 @@ return [
    // Aero
    [
       'merchant_name' => 'Aero',
-      'merchant_img' => null,
+      'merchant_img' => 'img/merchats/avata-aero.webp',
 
       'heroes_id' => [6, 7], // [Stelle, Vanessa]
       'tier_id' => 23, // Gold - Null
@@ -40,7 +40,7 @@ return [
    // Aila
    [
       'merchant_name' => 'Aila',
-      'merchant_img' => null,
+      'merchant_img' => 'img/merchats/avata-aila.webp',
 
       'heroes_id' => [1], // [Common]
       'tier_id' => 21, // Bronze - Null
@@ -57,7 +57,7 @@ return [
    // Ande
    [
       'merchant_name' => 'Ande',
-      'merchant_img' => null,
+      'merchant_img' => 'img/merchats/avata-ande.webp',
 
       'heroes_id' => [1], // [Common]
       'tier_id' => 21, // Bronze - Null
@@ -74,7 +74,7 @@ return [
    // Argenta
    [
       'merchant_name' => 'Argenta',
-      'merchant_img' => null,
+      'merchant_img' => 'img/merchats/avata-argenta.webp',
 
       'heroes_id' => [1], // [Common]
       'tier_id' => 22, // Silver - Null
@@ -91,7 +91,7 @@ return [
    // B1&B2
    [
       'merchant_name' => 'B1&B2',
-      'merchant_img' => null,
+      'merchant_img' => 'img\merchants\avatar-b1andb2.webp',
 
       'heroes_id' => [1], // [Common]
       'tier_id' => 24, // Diamond - Null
@@ -108,7 +108,7 @@ return [
    // Barkun
    [
       'merchant_name' => 'Barkun',
-      'merchant_img' => null,
+      'merchant_img' => 'img\merchants\avatar-barkun.webp',
 
       'heroes_id' => [1], // [Common]
       'tier_id' => 22, // Silver - Null
@@ -125,7 +125,7 @@ return [
    // Bjorn
    [
       'merchant_name' => 'Bjorn',
-      'merchant_img' => null,
+      'merchant_img' => 'img\merchants\avatar-bjorn.webp',
 
       'heroes_id' => [2, 4, 7], // [Dooley, Mak, Vanessa]
       'tier_id' => 23, // Gold - Null
@@ -142,7 +142,7 @@ return [
    // C4
    [
       'merchant_name' => 'C4',
-      'merchant_img' => null,
+      'merchant_img' => 'img\merchants\avatar-c4.webp',
 
       'heroes_id' => [4, 7], // [Mak, Vanessa]
       'tier_id' => 23, // Gold - Null
@@ -159,7 +159,7 @@ return [
    // Cobweb
    [
       'merchant_name' => 'Cobweb',
-      'merchant_img' => null,
+      'merchant_img' => 'img\merchants\avatar-cobweb.webp',
 
       'heroes_id' => [1], // [Common]
       'tier_id' => 24, // Diamond - Null
