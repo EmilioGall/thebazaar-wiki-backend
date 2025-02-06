@@ -38,11 +38,11 @@ class SkillMerchantTableSeeder extends Seeder
 
             );
 
-            $itemsQuery = Skill::query();
+            $skillsQuery = Skill::query();
 
             if (isset($merchantData['tags_id']) && !empty($merchantData['tags_id'])) {
 
-                $itemsQuery->whereHas('tags', function ($query) use ($merchantData) {
+                $skillsQuery->whereHas('tags', function ($query) use ($merchantData) {
 
                     $query->whereIn('tag_id', $merchantData['tags_id']);
 
@@ -51,21 +51,21 @@ class SkillMerchantTableSeeder extends Seeder
 
             if (isset($merchantData['tiers_id']) && !empty($merchantData['tiers_id'])) {
 
-                $itemsQuery->whereHas('tiers', function ($query) use ($merchantData) {
+                $skillsQuery->whereHas('tiers', function ($query) use ($merchantData) {
 
                     $query->whereIn('tier_id', $merchantData['tiers_id']);
 
                 });
             }
 
-            $items = $itemsQuery->get();
+            $skills = $skillsQuery->get();
 
-            foreach ($items as $item) {
+            foreach ($skills as $skill) {
 
-                DB::table('item_merchant')->insert([
+                DB::table('merchant_skill')->insert([
 
                     'merchant_id' => $merchant->id,
-                    'item_id' => $item->id,
+                    'skill_id' => $skill->id,
 
                 ]);
             }
