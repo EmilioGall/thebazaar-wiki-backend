@@ -22,7 +22,7 @@ class TagController extends Controller
         $data = [
 
             'result' => [
-                'items' => $tags,
+                'tags' => $tags,
             ],
             'success' => true
         ];

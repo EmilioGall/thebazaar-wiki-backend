@@ -22,7 +22,7 @@ class TierController extends Controller
         $data = [
 
             'result' => [
-                'items' => $tiers,
+                'tiers' => $tiers,
             ],
             'success' => true
         ];
