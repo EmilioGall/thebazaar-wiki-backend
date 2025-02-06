@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             MerchantsTableSeeder::class,
             ItemMerchantTableSeeder::class,
             SkillMerchantTableSeeder::class,
-            
+            HeroMerchantTableSeeder::class,
 
         ]);
 
