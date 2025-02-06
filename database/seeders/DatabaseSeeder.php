@@ -34,6 +34,8 @@ class DatabaseSeeder extends Seeder
             SkillTierTableSeeder::class,
             EffectSkillTierTableSeeder::class,
             MerchantsTableSeeder::class,
+            ItemMerchantTableSeeder::class,
+            SkillMerchantTableSeeder::class,
             
 
         ]);
