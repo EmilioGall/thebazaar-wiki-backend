@@ -37,12 +37,6 @@ class Tag extends Model
         return $this->belongsToMany(Item::class, 'item_tag');
     }
 
-    public function merchants()
-    {
-
-        return $this->belongsToMany(Merchant::class, 'merchant_tag');
-    }
-
     public function skills()
     {
 

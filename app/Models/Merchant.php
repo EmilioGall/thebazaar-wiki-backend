@@ -48,12 +48,6 @@ class Merchant extends Model
         return $this->belongsToMany(Skill::class, 'merchant_skill');
     }
 
-    public function tags()
-    {
-
-        return $this->belongsToMany(Tag::class, 'merchant_tag');
-    }
-
     public function tier()
     {
 
