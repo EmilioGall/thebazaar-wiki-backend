@@ -3,7 +3,11 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\ItemController;
+use App\Http\Controllers\API\MerchantController;
+use App\Http\Controllers\API\MonsterController;
 use App\Http\Controllers\API\SkillController;
+use App\Models\Tag;
+use App\Models\Tier;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +24,18 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/tags', [Tag::class, 'index']);
+
+Route::get('/tiers', [Tier::class, 'index']);
+
 Route::get('/items', [ItemController::class, 'index']);
 Route::get('/items/{slug}', [ItemController::class, 'show']);
 
 Route::get('/skills', [SkillController::class, 'index']);
 Route::get('/skills/{slug}', [SkillController::class, 'show']);
+
+Route::get('/merchants', [MerchantController::class, 'index']);
+Route::get('/merchants/{slug}', [MerchantController::class, 'show']);
+
+Route::get('/monsters', [MonsterController::class, 'index']);
+Route::get('/monsters/{slug}', [MonsterController::class, 'show']);
