@@ -6,6 +6,8 @@ use App\Http\Controllers\API\ItemController;
 use App\Http\Controllers\API\MerchantController;
 use App\Http\Controllers\API\MonsterController;
 use App\Http\Controllers\API\SkillController;
+use App\Http\Controllers\API\TagController;
+use App\Http\Controllers\API\TierController;
 use App\Models\Tag;
 use App\Models\Tier;
 
@@ -24,9 +26,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/tags', [Tag::class, 'index']);
+Route::get('/tags', [TagController::class, 'index']);
 
-Route::get('/tiers', [Tier::class, 'index']);
+Route::get('/tiers', [TierController::class, 'index']);
 
 Route::get('/items', [ItemController::class, 'index']);
 Route::get('/items/{slug}', [ItemController::class, 'show']);
