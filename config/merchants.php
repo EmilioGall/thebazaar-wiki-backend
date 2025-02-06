@@ -9,7 +9,9 @@ return [
 
       'heroes_id' => [1], // [Common]
       'tier_id' => 24, // Diamond - Null
+      
       'tags_id' => [], // []
+      'tiers_id' =>[19], // [Diamond - Rounded]
 
       'merchant_day' => 8,
       'merchant_reroll_cost' => null,
@@ -26,6 +28,7 @@ return [
       'heroes_id' => [6, 7], // [Stelle, Vanessa]
       'tier_id' => 23, // Gold - Null
       'tags_id' => [39], // ['vehicle']
+      'tiers_id' =>[], // []
 
       'merchant_day' => 6,
       'merchant_reroll_cost' => null,
@@ -42,6 +45,7 @@ return [
       'heroes_id' => [1], // [Common]
       'tier_id' => 21, // Bronze - Null
       'tags_id' => [40], // ['weapon']
+      'tiers_id' =>[], // []
 
       'merchant_day' => 1,
       'merchant_reroll_cost' => 2,
@@ -58,6 +62,7 @@ return [
       'heroes_id' => [1], // [Common]
       'tier_id' => 21, // Bronze - Null
       'tags_id' => [], // []
+      'tiers_id' =>[1, 2, 3, 4, 5], // [Bronze, Silver, Gold, Diamond - Small]
 
       'merchant_day' => 1,
       'merchant_reroll_cost' => 2,
@@ -74,6 +79,7 @@ return [
       'heroes_id' => [1], // [Common]
       'tier_id' => 22, // Silver - Null
       'tags_id' => [], // []
+      'tiers_id' =>[17], // [Silver - Rounded]
 
       'merchant_day' => null,
       'merchant_reroll_cost' => null,
@@ -90,6 +96,7 @@ return [
       'heroes_id' => [1], // [Common]
       'tier_id' => 24, // Diamond - Null
       'tags_id' => [], // []
+      'tiers_id' =>[], // []
 
       'merchant_day' => null,
       'merchant_reroll_cost' => null,
@@ -106,6 +113,7 @@ return [
       'heroes_id' => [1], // [Common]
       'tier_id' => 22, // Silver - Null
       'tags_id' => [], // []
+      'tiers_id' =>[6, 7, 8, 9, 10, 11, 12, 13, 14, 15], // [Bronze, Silver, Gold, Diamond - Medium & Bronze, Silver, Gold, Diamond - Large ]
 
       'merchant_day' => 1,
       'merchant_reroll_cost' => null,
@@ -122,6 +130,7 @@ return [
       'heroes_id' => [2, 4, 7], // [Dooley, Mak, Vanessa]
       'tier_id' => 23, // Gold - Null
       'tags_id' => [4], // [freeze]
+      'tiers_id' =>[], // []
 
       'merchant_day' => 6,
       'merchant_reroll_cost' => null,
@@ -138,6 +147,7 @@ return [
       'heroes_id' => [4, 7], // [Mak, Vanessa]
       'tier_id' => 23, // Gold - Null
       'tags_id' => [20], // [ammo]
+      'tiers_id' =>[], // []
 
       'merchant_day' => 3,
       'merchant_reroll_cost' => null,
@@ -154,6 +164,7 @@ return [
       'heroes_id' => [1], // [Common]
       'tier_id' => 24, // Diamond - Null
       'tags_id' => [9], // [slow]
+      'tiers_id' =>[], // []
 
       'merchant_day' => 6,
       'merchant_reroll_cost' => null,
