@@ -49,11 +49,11 @@ return [
       'effects' => [
 
          [
-            'effect_description' => 'When you Level Up, upgrade a { Tier } item.',
+            'effect_description' => 'When you Level Up, upgrade a { Tier1 } item.',
             'primary_value_bronze' => null,
             'primary_value_silver' => null,
-            'primary_value_gold' => 21,
-            'primary_value_diamond' => 22,
+            'primary_value_gold' => 'Bronze-tier',
+            'primary_value_diamond' => 'Silver-tier',
             'primary_value_legendary' => null,
             'secondary_value_bronze' => null,
             'secondary_value_silver' => null,

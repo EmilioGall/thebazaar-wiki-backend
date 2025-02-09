@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('effect_item_tier', function (Blueprint $table) {
 
-            $table->bigInteger('primary_value')->nullable();
-            $table->bigInteger('secondary_value')->nullable();
+            $table->string('primary_value')->nullable();
+            $table->string('secondary_value')->nullable();
 
             // Foreign key
             $table->unsignedBigInteger('effect_id');
