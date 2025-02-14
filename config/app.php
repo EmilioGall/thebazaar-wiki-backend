@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'TheBazaar Wiki'),
+    'name' => env('APP_NAME', 'TheBazaar Assistant'),
 
     /*
     |--------------------------------------------------------------------------
