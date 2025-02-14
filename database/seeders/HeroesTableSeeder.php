@@ -25,32 +25,32 @@ class HeroesTableSeeder extends Seeder
             ],
             [
                 'hero_name' => 'Dooley',
-                'hero_img' => 'img/heroes/avata-dooley.webp',
+                'hero_img' => 'avatar-dooley.webp',
                 'hero_description' => 'Dooley - Description',
             ],
             [
                 'hero_name' => 'Jules',
-                'hero_img' => 'img/heroes/avata-jules.webp',
+                'hero_img' => 'avatar-jules.webp',
                 'hero_description' => 'Jules - Description',
             ],
             [
                 'hero_name' => 'Mak',
-                'hero_img' => 'img/heroes/avata-mak.webp',
+                'hero_img' => 'avatar-mak.webp',
                 'hero_description' => 'Mak - Description',
             ],
             [
                 'hero_name' => 'Pygmalien',
-                'hero_img' => 'img/heroes/avata-pygmalien.webp',
+                'hero_img' => 'avatar-pygmalien.webp',
                 'hero_description' => 'Pygmalien - Description',
             ],
             [
                 'hero_name' => 'Stelle',
-                'hero_img' => 'img/heroes/avata-stelle.webp',
+                'hero_img' => 'avatar-stelle.webp',
                 'hero_description' => 'Stelle - Description',
             ],
             [
                 'hero_name' => 'Vanessa',
-                'hero_img' => 'img/heroes/avata-vanessa.webp',
+                'hero_img' => 'avatar-vanessa.webp',
                 'hero_description' => 'Vanessa - Description',
             ],
 
