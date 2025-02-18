@@ -61,27 +61,38 @@
 
          <div class="container-fluid vh-100">
             <div class="row h-100">
-               <!-- Definire solo parte del menu di navigazione inizialmente per poi
-        aggiungere i link necessari giorno per giorno
-        -->
+
+               <!-- Definire solo parte del menu di navigazione inizialmente per poi aggiungere i link necessari giorno per giorno -->
                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse">
+
                   <div class="position-sticky pt-3">
+
                      <ul class="nav flex-column">
+
                         <li class="nav-item">
                            <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.dashboard' ? 'bg-secondary' : '' }}"
                               href="{{ route('admin.dashboard') }}">
                               <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard
                            </a>
                         </li>
+
+                        <li class="nav-item">
+                           <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.items' ? 'bg-secondary' : '' }}"
+                              href="{{ route('admin.dashboard') }}">
+                              <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> All Items
+                           </a>
+                        </li>
+
                      </ul>
 
-
                   </div>
+
                </nav>
 
                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                   @yield('content')
                </main>
+
             </div>
          </div>
 

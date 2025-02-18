@@ -29,7 +29,8 @@
 
                <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
 
-                  <img style="width: 150px" src="{{ asset('img/general/TheBazaarLogo-1000x500.png') }}" alt="LogoTheBazaar">
+                  <img style="width: 150px" src="{{ asset('img/general/TheBazaarLogo-1000x500.png') }}"
+                     alt="LogoTheBazaar">
 
                </a>
 
@@ -50,7 +51,8 @@
                      <!-- Authentication Links -->
                      @guest
                         <li class="nav-item">
-                           <a class="nav-link d-flex justify-content-end" href="{{ route('login') }}">{{ __('Login') }}</a>
+                           <a class="nav-link"
+                              href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                      @else
                         <li class="nav-item dropdown">
@@ -68,10 +70,10 @@
                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
                               <a class="dropdown-item" href="{{ url('admin') }}">{{ __('Dashboard') }}</a>
-                              
+
                               <a class="dropdown-item" href="{{ route('logout') }}"
                                  onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    document.getElementById('logout-form').submit();">
                                  {{ __('Logout') }}
                               </a>
 
@@ -88,7 +90,7 @@
                </div>
 
             </div>
-            
+
          </nav>
 
          <main class="">
