@@ -78,7 +78,7 @@
 
                         <li class="nav-item">
                            <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.items' ? 'bg-secondary' : '' }}"
-                              href="{{ route('admin.dashboard') }}">
+                              href="{{ route('admin.items.index') }}">
                               <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> All Items
                            </a>
                         </li>
