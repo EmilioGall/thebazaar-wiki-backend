@@ -15,6 +15,8 @@
                         @endif
 
                         {{ __('You are logged in!') }}
+
+                        <i class="fa-solid fa-house-chimney"></i>
                     </div>
                 </div>
             </div>
